@@ -9,11 +9,7 @@ These are my own observations and questions. They are not evidence that a paper 
 
 ## Reading notes
 
-Keep your answers to the [reading questions](../WORKFLOW.md#1-find-and-read-sources) here, labelled by source.
-
-### Source A
-
-### Source B
+Keep your answers to the [reading questions](../WORKFLOW.md#1-find-and-read-sources) here. Add a heading with the paper's title and a link to its source record for each paper you read.
 
 ## Observations and uncertainties
 

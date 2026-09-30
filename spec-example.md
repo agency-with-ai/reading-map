@@ -32,6 +32,6 @@ How should I show the model the professor's style? I want evidence for choosing 
 
 How should I test the result? I need a comparison that measures resemblance to this author, rather than whether readers prefer fluent prose or recognize copied sentences. The number of passages and readers, and the threshold for claiming improvement, remain open.
 
-Start with one of these questions and two relevant sources. The wiki should explain what each paper suggests trying, what it actually tested, and whether its evidence applies here. Use the checked evidence to make one choice in this spec, or explain why the choice remains open.
+Start with one of these questions and relevant sources. The wiki should explain what each paper suggests trying, what it actually tested, and whether its evidence applies here. Use the checked evidence to make one choice in this spec, or explain why the choice remains open.
 
 This example develops the [author-style writing project (2026)](https://github.com/agency-with-ai/courseware/issues/5). Its questions draw on the [feature-spec template (2026)](https://github.com/github/spec-kit/blob/main/templates/spec-template.md).

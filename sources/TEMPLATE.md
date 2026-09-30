@@ -1,4 +1,4 @@
-# Source A
+# Source record
 
 Fill this record from a paper you have opened. Empty fields are not evidence.
 

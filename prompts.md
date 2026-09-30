@@ -1,6 +1,6 @@
 # Requests for Claude
 
-Fill in the bracketed question and spec passage before sending a request.
+Fill in the bracketed fields before sending a request. Supply paths to completed source records, not `sources/TEMPLATE.md` or your reading notes.
 
 ## Find candidate papers
 
@@ -10,32 +10,24 @@ The choice I want to investigate is [choice].
 The relevant spec passage is [passage].
 Find candidate papers that could help answer [question].
 Return titles, URLs, reasons for relevance, and any access limits.
-I will choose two sources and check them. Do not change or download files.
+I will choose sources and check them. Do not change or download files.
 ```
 
-## Incorporate the first source
+## Incorporate sources
 
 ```text
-Read CONVENTIONS.md and spec.md.
+Read CONVENTIONS.md, spec.md, sources/notes.md, and wiki/index.md.
 My question is [question], about [spec passage].
-Read sources/source-a.md.
-Create wiki/source-a.md with a short account of the source,
-its evidence and limits, and how it bears on my question.
-Link claims to the source record and original passage locations.
-Add the page to wiki/index.md.
-Write only inside wiki/. Do not browse or install anything.
-```
-
-## Connect the second source
-
-```text
-Read CONVENTIONS.md, sources/source-b.md,
-sources/notes.md, and the existing wiki pages.
-Create wiki/source-b.md and wiki/question.md.
-Connect both sources to my question [question] from spec.md.
+Read these completed source records: [source-record paths].
+For each record, create or update a page in wiki/ using the same filename.
+Explain what the authors did, what they found, and the limits of their evidence.
+Update wiki/question.md with what these sources support or leave open.
+Read existing wiki pages and their cited records as needed to connect the papers.
+Keep unaffected text and recorded checks. Mark revised claims as unchecked
+and flag conflicts with checked claims for review.
 Distinguish the papers' findings, my notes, and your own inferences.
-Link to both source pages and record what the supplied passages cannot settle.
-Update the index. Write only inside wiki/. Do not browse.
+Link claims to the source records and original passage locations.
+Update the index. Write only inside wiki/. Do not browse or install anything.
 ```
 
 ## Query the saved pages in a fresh session

@@ -6,9 +6,9 @@
 
 Choose a requirement, assumption, or undecided choice in `spec.md`. The question can concern what to build or how to evaluate it. For example, [the writing-project spec](spec-example.md) leaves open both how to represent an author's style and how to compare passages. Start with one decision.
 
-Send Claude the [find request](prompts.md#find-candidate-papers) with that passage and an explicit literature question. Start with two relevant sources. If a paper is inaccessible, look for an accessible version or another relevant source. Record what you could not read.
+Send Claude the [find request](prompts.md#find-candidate-papers) with that passage and an explicit literature question. Choose sources that could help answer it. You can start with one paper and add others as needed. If a paper is inaccessible, look for an accessible version or another relevant source. Record what you could not read.
 
-Check that each paper exists and fill in [source-a.md](sources/source-a.md) and [source-b.md](sources/source-b.md). Save the title, URL, relevant passage, and its section or page number. Keep the original papers available, locally in `sources/papers/` if useful.
+Check that each paper exists. Copy [TEMPLATE.md](sources/TEMPLATE.md) for each paper you choose, using a unique, descriptive filename such as `sources/style-evaluation.md`. Leave the template unchanged. Fill each record with the title, URL, relevant passage, and its section or page number. Keep the original papers available, locally in `sources/papers/` if useful.
 
 Before asking Claude to summarize the sources, skim each paper's abstract, introduction, figures, and conclusion yourself. Record brief answers in your notes and mark gaps rather than guessing.
 
@@ -27,7 +27,7 @@ mkdir evidence/sources-before-agent && cp -R sources/. evidence/sources-before-a
 
 ## 2. Build and connect the pages
 
-Send Claude the [first-source request](prompts.md#incorporate-the-first-source), then the [second-source request](prompts.md#connect-the-second-source). Each source page should explain what the authors did, what they found, and what their evidence does not establish. The second request also creates a question page that connects both papers to your spec.
+Send Claude the [incorporate request](prompts.md#incorporate-sources) with the paths to the completed source records you want to add. You can supply one or several. Each record gets a page in `wiki/` with the same filename, explaining what the authors did, what they found, and what their evidence does not establish. The question page connects the sources to your spec and records what remains unanswered.
 
 Read the pages yourself. Then compare the source records with your saved copy to check that Claude left them unchanged. No output means the copies match.
 
@@ -37,7 +37,7 @@ diff -ru evidence/sources-before-agent sources
 
 ## 3. Check and reuse the wiki
 
-Compare the pages with your reading notes. Check one factual claim against its exact passage, and follow one claimed connection back to both original papers. For each, answer these questions.
+Compare the pages with your reading notes. Check at least one factual claim against its exact passage. If the wiki connects papers, check one connection against the passages it cites. For each check, answer these questions.
 
 - Does the passage support the claim, including its qualifiers?
 - What inputs, data, metric, baseline, or assumptions does the result depend on?
@@ -57,4 +57,4 @@ Use the checked answer to choose or reconsider a benchmark, metric, baseline, me
 
 Record the choice, reason, and supporting passages in your spec. You can keep the choice open and name the next check if the evidence does not settle it. If `spec.md` is a copy from another project folder, update that original and refresh the copy here.
 
-You can repeat the workflow as new questions arise. Add source records as needed, adapt the prompts to name them, and take a fresh snapshot before each build. Keep the wiki's index and checked answer consistent with the sources you have added.
+You can repeat the workflow as new questions arise. Add source records as needed, name their paths in the request, and take a fresh snapshot before each build. Keep the wiki's index and checked answer consistent with the sources you have added.

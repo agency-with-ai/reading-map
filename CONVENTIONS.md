@@ -8,7 +8,9 @@ When the user asks for a literature search, return candidate titles, URLs, and r
 
 ## Building pages
 
-Read the selected records in `sources/`. Write only in `wiki/`. Keep `sources/`, these conventions, `spec.md`, and other project files unchanged. Do not browse, download, or install anything during this task.
+Read the completed source records named in the request. Existing wiki pages and their cited records may help connect the sources. Do not treat `sources/TEMPLATE.md` or `sources/notes.md` as a paper. Write only in `wiki/`. Keep `sources/`, these conventions, `spec.md`, and other project files unchanged. Do not browse, download, or install anything during this task.
+
+Use the record's filename for its wiki page. Reserve `index.md`, `question.md`, and `answer.md` for the shared wiki pages. If a source filename would overwrite one of these or a page about a different paper, ask for a different filename.
 
 Keep pages short. Each source page must explain what the authors did, what they found, and what their evidence does not establish. Add each page to `wiki/index.md` with a one-sentence description. Use relative Markdown links. Link factual claims to a source record and name the original paper's section, page, or equation. Distinguish paper claims, the user's notes, and your own inferences. Keep assumptions, disagreements, and unanswered questions visible. A source template with empty fields is missing evidence.
 
