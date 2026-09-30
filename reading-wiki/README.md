@@ -27,7 +27,7 @@ mkdir evidence/sources-before-agent && cp -R reading-wiki/sources/. evidence/sou
 
 ## 2. Build and connect the pages
 
-Send Claude the [first-source request](prompts.md#incorporate-the-first-source), then the [second-source request](prompts.md#connect-the-second-source). The first creates a page for source A. The second adds a page for source B and a question page that connects both papers to your spec.
+Send Claude the [first-source request](prompts.md#incorporate-the-first-source), then the [second-source request](prompts.md#connect-the-second-source). Each source page should explain what the authors did, what they found, and what their evidence does not establish. The second request also creates a question page that connects both papers to your spec.
 
 Read the pages yourself. Then compare the source records with your saved copy to check that Claude left them unchanged. No output means the copies match.
 

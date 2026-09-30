@@ -10,7 +10,7 @@ When the user asks for a literature search, return candidate titles, URLs, and r
 
 Read the selected records in `reading-wiki/sources/`. Write only in `reading-wiki/wiki/`. Keep `reading-wiki/sources/`, these conventions, `spec.md`, and other project files unchanged. Do not browse, download, or install anything during this task.
 
-Keep pages short. Add each page to `reading-wiki/wiki/index.md` with a one-sentence description. Use relative Markdown links. Link factual claims to a source record and name the original paper's section, page, or equation. Distinguish paper claims, the user's notes, and your own inferences. Keep assumptions, disagreements, and unanswered questions visible. A source template with empty fields is missing evidence.
+Keep pages short. Each source page must explain what the authors did, what they found, and what their evidence does not establish. Add each page to `reading-wiki/wiki/index.md` with a one-sentence description. Use relative Markdown links. Link factual claims to a source record and name the original paper's section, page, or equation. Distinguish paper claims, the user's notes, and your own inferences. Keep assumptions, disagreements, and unanswered questions visible. A source template with empty fields is missing evidence.
 
 Do not invent a disagreement or use the user's notes as proof of a paper's claim. Mark a claim as checked only when the user supplies the check and result. Identify unreadable or missing passages and ask for them rather than filling gaps from memory.
 
