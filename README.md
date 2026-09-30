@@ -13,9 +13,9 @@ git clone https://github.com/agency-with-ai/reading-map.git
 cd reading-map
 ```
 
-Put your project spec in `spec.md`. If you keep it in another project folder, copy it here and keep that original as the spec you update. Use [the example](spec-example.md) to see the detail needed to choose a literature question.
+Put your project spec in `spec.md`. If you keep it in another project folder, copy it here. Ask another reader to judge one possible result from the spec alone. If they cannot, add the missing example or requirement.
 
-Open the clone in a Claude session that can read and edit local files and search the web. Follow [the wiki guide](reading-wiki/README.md) to find sources, build connected pages, check claims, and use the evidence for a project decision. Keep your reading notes and checks in [your research notes](reading-wiki/sources/notes.md).
+Open the clone in a Claude session that can read and edit local files and search the web. Then follow [the wiki guide](reading-wiki/README.md).
 
 No wiki app or package installation is needed. Keep local Git commits as you work; pushing is not required.
 
@@ -23,7 +23,7 @@ No wiki app or package installation is needed. Keep local Git commits as you wor
 
 | File or folder | Use |
 |---|---|
-| `spec.md` | Your project spec, supplied by you and ignored by Git |
+| `spec.md` | Your project spec, supplied by you |
 | [Write like a professor (2026)](spec-example.md) | A concrete writing project with a sample request and two open literature questions |
 | [reading-wiki/README.md](reading-wiki/README.md) | The guide to finding, reading, and checking sources |
 | [reading-wiki/prompts.md](reading-wiki/prompts.md) | Requests to send Claude for each task |
@@ -31,7 +31,7 @@ No wiki app or package installation is needed. Keep local Git commits as you wor
 | `reading-wiki/sources/` | Your source records and notes |
 | `reading-wiki/wiki/` | Pages Claude creates and connects |
 | `evidence/` | Saved conversations and file-read records |
-| [references/](references/README.md) | A guide to the example spec and further reading |
+| [references/](references/README.md) | Further reading on wikis and specifications |
 
 Use project material you may share with Claude and anyone reviewing your work. Keep your working copy local or in a private repository. Git ignores `spec.md`, saved papers, and `evidence/`. Source records and notes can enter commits, so inspect them before sharing.
 

@@ -1,6 +1,6 @@
 # Requests for Claude
 
-Run these from the repository root. Fill in the bracketed question and spec passage before sending a request. Save exchanges in `evidence/`.
+Fill in the bracketed question and spec passage before sending a request.
 
 ## Find candidate papers
 

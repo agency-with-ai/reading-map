@@ -9,7 +9,7 @@ These are my own observations and questions. They are not evidence that a paper 
 
 ## Reading notes
 
-Keep your answers to the [reading questions](../README.md#1-find-and-read-sources) here, labelled by source. Mark what you have not understood or checked.
+Keep your answers to the [reading questions](../README.md#1-find-and-read-sources) here, labelled by source.
 
 ### Source A
 

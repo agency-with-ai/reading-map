@@ -1,6 +1,6 @@
 # Use the spec to build and check a wiki
 
-Work from the repository root with your project spec in `spec.md`. [prompts.md](prompts.md) has a request for each Claude task below. Save each exchange in `evidence/` and keep your reading notes and checks in [sources/notes.md](sources/notes.md).
+[prompts.md](prompts.md) has a request for each Claude task below. Save each exchange in `evidence/` and keep your reading notes and checks in [sources/notes.md](sources/notes.md).
 
 ## 1. Find and read sources
 
@@ -8,7 +8,7 @@ Choose a requirement, assumption, or undecided choice in `spec.md`. The question
 
 Send Claude the [find request](prompts.md#find-candidate-papers) with that passage and an explicit literature question. Start with two relevant sources. If a paper is inaccessible, look for an accessible version or another relevant source. Record what you could not read.
 
-Check that each paper exists and fill in [source-a.md](sources/source-a.md) and [source-b.md](sources/source-b.md). Save the title, URL, relevant passage, and its section or page number. Keep the original papers available, locally in `reading-wiki/sources/papers/` if useful. Put your own notes in [notes.md](sources/notes.md), clearly labelled as yours.
+Check that each paper exists and fill in [source-a.md](sources/source-a.md) and [source-b.md](sources/source-b.md). Save the title, URL, relevant passage, and its section or page number. Keep the original papers available, locally in `reading-wiki/sources/papers/` if useful.
 
 Before asking Claude to summarize the sources, skim each paper's abstract, introduction, figures, and conclusion yourself. Record brief answers in your notes and mark gaps rather than guessing.
 
