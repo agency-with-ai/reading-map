@@ -4,11 +4,11 @@
 
 The project builds a tool that writes like a chosen EECS professor. This increment tests whether readers can tell its writing from the professor's.
 
-The increment covers one professor and one kind of writing, short technical explanations. It compares a plain request to write like the professor with a method informed by the literature. A web app and fine-tuning are outside this increment.
+The increment covers one professor and one kind of writing, short course catalog descriptions. It compares a plain request to write like the professor with a method informed by the literature. A web app and fine-tuning are outside this increment.
 
 ## Inputs and outputs
 
-I supply examples of the professor's public writing, a topic, the facts to include, an audience, and a word limit. The tool returns a draft in that professor's style.
+I supply examples of the professor's public writing, course slides and draft notes, the facts to include, an audience, and a word limit. The tool returns a draft in that professor's style.
 
 Each comparison produces two passages on the same topic, one written by the professor and one generated, and readers' votes on which is which. Keep the prompts, drafts, and votes so someone else can inspect the comparison.
 
@@ -22,11 +22,9 @@ Use the same model, briefs, and word limits for both approaches.
 
 ## Examples and acceptance checks
 
-For example, I might ask the tool to write this passage.
+For example, I might want to write a short course catalog description of my class, using all slides and draft notes as reference anchors.
 
-> Explain to a student who knows gradient descent why high training accuracy does not guarantee good performance on new data. Include the role of a held-out test set. Use about 200 words.
-
-An acceptable draft explains the gap correctly in about 200 words and reads like the professor's own explanation. A draft that treats training accuracy as proof of performance on new data fails, even if its prose sounds convincing.
+An acceptable draft describes the class accurately and reads like the professor's own writing. A draft that promises topics or activities unsupported by the slides and notes fails, even if its prose sounds convincing.
 
 Check facts and copied phrasing before judging style. Reject a draft with a factual error, wording copied from the reserved original, or an invented quotation or experience. Count rejected drafts as failures and report them alongside the style judgments.
 
@@ -45,5 +43,3 @@ The method must be chosen before generating drafts. The number of passages and r
 ## Implementation constraints
 
 Use a local script and keep the records in files someone else can inspect. The model and script design are open.
-
-This example develops the [author-style writing project (2026)](https://github.com/agency-with-ai/courseware/issues/5).

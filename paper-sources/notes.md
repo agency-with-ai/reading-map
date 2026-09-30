@@ -9,7 +9,7 @@ These are my own observations and questions. They are not evidence that a paper 
 
 ## Reading notes
 
-For each paper, add a heading with its title and a link to its source record. Record observations, questions, and uncertainties that bear on your decision. See the [reading questions](../WORKFLOW.md#1-find-and-read-sources) for prompts.
+For each paper, add a heading with its title and a link to its source record. Record observations, questions, and uncertainties that bear on your decision. See the [reading questions](../README.md#1-find-and-read-sources) for prompts.
 
 ## Claim checks
 
