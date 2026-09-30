@@ -1,0 +1,17 @@
+# Local credentials and machine files
+.env
+.env.*
+!.env.example
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+
+# The project spec is supplied by each student.
+/spec.md
+
+# Keep local source attachments and conversation exports out of routine commits.
+reading-wiki/sources/papers/*
+!reading-wiki/sources/papers/.gitkeep
+evidence/*
+!evidence/README.md
