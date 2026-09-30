@@ -9,7 +9,7 @@ These are my own observations and questions. They are not evidence that a paper 
 
 ## Reading notes
 
-Keep your answers to the [reading questions](../WORKFLOW.md#1-find-and-read-sources) here. Add a heading with the paper's title and a link to its source record for each paper you read.
+Keep observations and questions that help with your project decision here. The [reading questions](../WORKFLOW.md#1-find-and-read-sources) are optional prompts. Add a heading with the paper's title and a link to its source record for each paper you take notes on.
 
 ## Observations and uncertainties
 

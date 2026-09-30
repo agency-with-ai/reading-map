@@ -7,11 +7,11 @@ __pycache__/
 *.py[cod]
 .venv/
 
-# The project spec is supplied by each student.
+# The project spec is supplied by the user.
 /spec.md
 
 # Keep local source attachments and conversation exports out of routine commits.
-sources/papers/*
-!sources/papers/.gitkeep
+paper-sources/papers/*
+!paper-sources/papers/.gitkeep
 evidence/*
 !evidence/README.md

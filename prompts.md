@@ -1,6 +1,6 @@
 # Requests for Claude
 
-Fill in the bracketed fields before sending a request. Supply paths to completed source records, not `sources/TEMPLATE.md` or your reading notes.
+Fill in the bracketed fields before sending a request. Supply paths to completed source records, not `paper-sources/TEMPLATE.md` or your reading notes.
 
 ## Find candidate papers
 
@@ -16,7 +16,7 @@ I will choose sources and check them. Do not change or download files.
 ## Incorporate sources
 
 ```text
-Read CONVENTIONS.md, spec.md, sources/notes.md, and wiki/index.md.
+Read CONVENTIONS.md, spec.md, paper-sources/notes.md, and wiki/index.md.
 My question is [question], about [spec passage].
 Read these completed source records: [source-record paths].
 For each record, create or update a page in wiki/ using the same filename.
@@ -30,7 +30,7 @@ Link claims to the source records and original passage locations.
 Update the index. Write only inside wiki/. Do not browse or install anything.
 ```
 
-## Query the saved pages in a fresh session
+## Query saved pages
 
 ```text
 Read CONVENTIONS.md and wiki/index.md.

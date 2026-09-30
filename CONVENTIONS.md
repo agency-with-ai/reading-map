@@ -8,7 +8,7 @@ When the user asks for a literature search, return candidate titles, URLs, and r
 
 ## Building pages
 
-Read the completed source records named in the request. Existing wiki pages and their cited records may help connect the sources. Do not treat `sources/TEMPLATE.md` or `sources/notes.md` as a paper. Write only in `wiki/`. Keep `sources/`, these conventions, `spec.md`, and other project files unchanged. Do not browse, download, or install anything during this task.
+Read the completed source records named in the request. Existing wiki pages and their cited records may help connect the sources. Do not treat `paper-sources/TEMPLATE.md` or `paper-sources/notes.md` as a paper. Write only in `wiki/`. Keep `paper-sources/`, these conventions, `spec.md`, and other project files unchanged. Do not browse, download, or install anything during this task.
 
 Use the record's filename for its wiki page. Reserve `index.md`, `question.md`, and `answer.md` for the shared wiki pages. If a source filename would overwrite one of these or a page about a different paper, ask for a different filename.
 
