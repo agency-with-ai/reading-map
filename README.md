@@ -15,11 +15,9 @@ git clone https://github.com/agency-with-ai/reading-map.git
 cd reading-map
 ```
 
-Copy your revised project spec into this folder as `spec.md`. It is input to the wiki task, not a blank form to fill in again. See [the worked writing-project spec](spec-example.md) for an example. Keep your own notes in `lab3-note.md`, using your existing lab notes or the supplied template.
+Copy your revised project spec into this folder as `spec.md`. The original in your project folder remains the spec you update. Keep your notes in the `lab3-note.md` you started in Lab 3. Then follow [the wiki guide](reading-wiki/README.md).
 
-Follow [the wiki guide](reading-wiki/README.md) to select two sources, build and connect pages, check their claims, and query the saved wiki. Use the evidence to support or revise one project choice, or explain why it remains unresolved. Carry any decision back to the spec in your original project folder.
-
-The folders and templates are ready. No wiki app or package installation is needed. Keep local Git commits as you work; pushing your work is not required.
+No wiki app or package installation is needed. Keep local Git commits as you work; pushing is not required.
 
 ## Files
 
@@ -27,14 +25,14 @@ The folders and templates are ready. No wiki app or package installation is need
 |---|---|
 | `spec.md` | Your revised project spec, copied here by you and ignored by Git |
 | [Write like a professor (2026)](spec-example.md) | A concrete writing project with a sample request and two open literature questions |
-| `lab3-note.md` | Reading notes, checked claims, project decisions, and staff feedback |
-| `reading-wiki/sources/` | Source records and your own notes |
+| [reading-wiki/README.md](reading-wiki/README.md) | The guide to finding, reading, and checking sources |
+| [reading-wiki/prompts.md](reading-wiki/prompts.md) | Requests to send Claude for each task |
+| [reading-wiki/CONVENTIONS.md](reading-wiki/CONVENTIONS.md) | Rules Claude follows when it finds sources, builds pages, and answers from them |
+| `reading-wiki/sources/` | Your source records and notes |
 | `reading-wiki/wiki/` | Pages Claude creates and connects |
-| `reading-wiki/CONVENTIONS.md` | Instructions for maintaining the wiki |
-| `reading-wiki/prompts.md` | Requests for finding papers, building pages, and querying them |
 | `evidence/` | Saved conversations and file-read records |
-| `references/` | Spec, reading, and claim-checking guides |
+| [references/](references/README.md) | A guide to the example spec and further reading |
 
-Use project material you may share with Claude, your partner, and staff. Keep your working copy local or in a private repository. Source records and notes can enter commits; inspect them before sharing. A local Git commit does not publish your files.
+Use project material you may share with Claude, your partner, and staff. Keep your working copy local or in a private repository. Git ignores `spec.md`, saved papers, and `evidence/`. Source records and notes can enter commits, so inspect them before sharing.
 
 The starter's teaching materials are adapted from [courseware](https://github.com/agency-with-ai/courseware) under [CC BY-SA 4.0](LICENSE). Papers, excerpts, and student project files retain their own licenses.

@@ -49,4 +49,13 @@ Do not browse, change files, or fill gaps from memory.
 Give the answer here for review.
 ```
 
-Check the answer before asking Claude to save `reading-wiki/wiki/answer.md` and update `reading-wiki/wiki/index.md`. Specify which claims you checked and what those checks established.
+## Save the checked answer
+
+Send this only after you have checked the answer.
+
+```text
+Save the answer as reading-wiki/wiki/answer.md and link it from
+reading-wiki/wiki/index.md. I checked [claims] against [passages]
+and found [result]. Mark every other claim as unchecked and list
+the missing evidence. Write only inside reading-wiki/wiki/.
+```

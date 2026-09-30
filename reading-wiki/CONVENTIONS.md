@@ -8,7 +8,7 @@ When the student asks for a literature search, return candidate titles, URLs, an
 
 ## Building pages
 
-Read the selected records in `reading-wiki/sources/`. Write only in `reading-wiki/wiki/`. Keep `reading-wiki/sources/`, these conventions, `spec.md`, `lab3-note.md`, and other project files unchanged. Do not browse, download, or install anything during this task.
+Read the selected records in `reading-wiki/sources/`. Write only in `reading-wiki/wiki/`. Keep `reading-wiki/sources/`, these conventions, `spec.md`, and other project files unchanged. Do not browse, download, or install anything during this task.
 
 Keep pages short. Add each page to `reading-wiki/wiki/index.md` with a one-sentence description. Use relative Markdown links. Link factual claims to a source record and name the original paper's section, page, or equation. Distinguish paper claims, the student's notes, and your own inferences. Keep assumptions, disagreements, and unanswered questions visible. A source template with empty fields is missing evidence.
 
