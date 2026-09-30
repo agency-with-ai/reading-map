@@ -1,5 +1,7 @@
 # Saved evidence
 
-Save exported conversations and file-read records here, and note their paths in [your research notes](../paper-sources/notes.md#saved-exchanges). In Claude Code, `/export` saves the current conversation. Label errors and incomplete runs as such.
+Keep conversation exports, file-read records, and source snapshots here. Link saved exchanges from [your notes](../paper-sources/notes.md#saved-exchanges). Label errors and incomplete runs.
 
-Git ignores everything in this folder except this file. Check an export before sharing it with anyone reviewing your work.
+In Claude Code, use `/export` to save the current conversation. Review exports before sharing them.
+
+Git ignores this folder's contents except this README.

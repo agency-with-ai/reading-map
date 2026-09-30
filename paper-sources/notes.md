@@ -1,19 +1,21 @@
 # My notes
 
-These are my own observations and questions. They are not evidence that a paper makes a claim.
+Keep your observations, questions, and checks here. Use each paper's source record for what the authors claim.
 
 ## Question from my spec
 
-- Spec passage and project decision
-- What evidence would help me decide
+- Spec passage and decision to investigate
+- Evidence I need to decide
 
 ## Reading notes
 
-For each paper, add a heading with its title and a link to its source record. Record observations, questions, and uncertainties that bear on your decision. See the [reading questions](../README.md#1-find-and-read-sources) for prompts.
+Add a heading for each paper and link to its source record. Record observations, questions, and uncertainties that bear on your decision. See [Find and read sources](../README.md#1-find-and-read-sources) for reading prompts.
 
 ## Claim checks
 
-| Claim or connection | Source passage and location | Supported, corrected, or unresolved |
+For each claim you check, record the original passage and your result. If you correct a claim, include the correction.
+
+| Claim or connection | Source passage and location | Result: supported, corrected, or unresolved |
 |---|---|---|
 | | | |
 
@@ -25,4 +27,4 @@ For each paper, add a heading with its title and a link to its source record. Re
 
 ## Saved exchanges
 
-Record paths to the conversations, answer, and file-read records saved in `evidence/`.
+Link to the conversations and file-read records in `evidence/`, and to any saved answer in `wiki/answer.md`.

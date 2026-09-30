@@ -1,3 +1,3 @@
 # Literature wiki
 
-No sources have been incorporated yet. Claude adds links and one-sentence descriptions here as it creates pages.
+No source pages yet. Claude adds a link and a one-sentence description for each page it builds.

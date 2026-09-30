@@ -1,45 +1,42 @@
-# Example project: write like a professor
+# Example project: write like Feynman
 
-## Purpose and scope
+## Goal and scope
 
-The project builds a tool that writes like a chosen EECS professor. This increment tests whether readers can tell its writing from the professor's.
+Build a tool that drafts short technical explanations in Richard Feynman's style. Test whether readers mistake the drafts for his writing. Compare a method chosen from the literature with a plain request to write like him.
 
-The increment covers one professor and one kind of writing, short course catalog descriptions. It compares a plain request to write like the professor with a method informed by the literature. A web app and fine-tuning are outside this increment.
+This version covers one author and one kind of writing. Use a local script and save the prompts, drafts, and reader votes for others to inspect. A web app and fine-tuning are outside the scope. The model and script design are open.
 
-## Inputs and outputs
+## Inputs and output
 
-I supply examples of the professor's public writing, course slides and draft notes, the facts to include, an audience, and a word limit. The tool returns a draft in that professor's style.
+I supply passages from Feynman's published lectures and books, the facts to include, an audience, and a word limit. The tool returns an explanation that resembles how he builds an argument, chooses examples, and addresses the reader.
 
-Each comparison produces two passages on the same topic, one written by the professor and one generated, and readers' votes on which is which. Keep the prompts, drafts, and votes so someone else can inspect the comparison.
+For example, an explanation for a student who knows gradient descent might cover why high training accuracy does not guarantee good performance on new data. It could also explain the role of a held-out test set. A draft that treats training accuracy as proof of performance on new data fails, even if it sounds convincing.
 
-## Required behavior
+## Comparison procedure
 
-The draft should sound like the professor, not describe their style. It should resemble how they build an argument, choose examples, and address the reader. It must not invent quotations or personal experiences.
+Collect attributed passages from the author's published writing. Use some as style examples and reserve others for evaluation. Prefer reserved passages that readers are unlikely to have read.
 
-Collect attributed public passages, keeping some for style examples and others for evaluation. For each comparison, derive a factual brief from a reserved original passage without copying its wording. Do not supply the original to the generator. Pair the generated draft with that original, on the same topic and at a similar length. Tell readers that one passage is generated and reveal the answer afterward.
+For each reserved passage, prepare a factual brief without copying its wording. Give the generator the brief, but not the original passage.
 
-Use the same model, briefs, and word limits for both approaches.
+Choose the method before generating drafts. Use both that method and the plain request, keeping the model, briefs, and word limits the same.
 
-## Examples and acceptance checks
+Before collecting reader votes, set the comparison design, the number of passages and readers, and how much better the method must perform to count as an improvement.
 
-For example, I might want to write a short course catalog description of my class, using all slides and draft notes as reference anchors.
+Pair each generated draft with its reserved original on the same topic and at a similar length. Tell readers that one passage is generated and ask which one. Reveal the answer after they vote.
 
-An acceptable draft describes the class accurately and reads like the professor's own writing. A draft that promises topics or activities unsupported by the slides and notes fails, even if its prose sounds convincing.
+The comparison should measure resemblance to the author, rather than a preference for fluent prose or recognition of a familiar passage.
 
-Check facts and copied phrasing before judging style. Reject a draft with a factual error, wording copied from the reserved original, or an invented quotation or experience. Count rejected drafts as failures and report them alongside the style judgments.
+## Acceptance checks
 
-The hypothesis is that readers sometimes mistake generated writing for the professor's, and the method does better than the plain request. The comparison design and threshold for improvement remain open below.
+Check facts and copied phrasing before asking readers to judge style. Reject drafts with factual errors, wording copied from the reserved original, or invented quotations or personal experiences. A draft that describes the author's style instead of explaining the topic also fails.
 
-## Assumptions and open questions
+Count rejected drafts as failures and report them alongside reader judgments.
 
-I assume the professor has enough attributed public writing to supply style examples and still reserve passages for evaluation.
+## Assumptions and open decisions
 
-How should I show the model the professor's style? I need evidence to choose example passages, explicit style instructions, both, or another approach that fits this increment.
+I assume some of Feynman's published passages are obscure enough that neither readers nor the model recognize them.
 
-How should I test the result? I need a comparison that measures resemblance to this author, rather than whether readers prefer fluent prose or recognize copied sentences. The number of passages and readers, and the threshold for claiming improvement, remain open.
+The literature search should inform two decisions.
 
-The method must be chosen before generating drafts. The number of passages and readers and the threshold must be set before any reader votes.
-
-## Implementation constraints
-
-Use a local script and keep the records in files someone else can inspect. The model and script design are open.
+1. How should I show the model the author's style? Consider example passages, explicit style instructions, a combination, or another approach within scope.
+2. How should I measure success? Choose a comparison that tests resemblance to the author and measures improvement over the plain request.

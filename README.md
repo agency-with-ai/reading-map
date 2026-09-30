@@ -1,25 +1,33 @@
 # Reading Map
 
-A starter for building and checking a literature wiki around a question from your project spec. Connect papers to a project decision, check the evidence, and keep unanswered questions visible.
+Build a literature wiki to help answer a question from your project spec. You read and check the papers; Claude connects your source records into pages you can query. Use the checked evidence to make a project decision or name what you still need to learn.
 
-## Start
+## Set up
 
 ```sh
 git clone https://github.com/agency-with-ai/reading-map.git
 cd reading-map
 ```
 
-Put your project spec in `spec.md`. If you keep it in another project folder, copy it here. See [Write like a professor (2026)](spec-example.md) for an example.
+Put your project spec in `spec.md`. You can copy it from another project folder. See [Write like Feynman](spec-example.md) for an example.
 
-Use only project material you may share with Claude and anyone reviewing your work, and keep your copy local or in a private repository. Open the clone in a Claude session that can read and edit local files and search the web.
+Keep your copy local or in a private repository. Include only material you may share with Claude and anyone reviewing your work. Open the repo in a Claude session that can read and edit local files and search the web.
 
-Fill in the bracketed fields before sending each request to Claude. [CLAUDE.md](CLAUDE.md) defines how Claude handles each task. Save exchanges as described in [evidence/README.md](evidence/README.md), and keep reading notes and checks in [paper-sources/notes.md](paper-sources/notes.md).
+Use these files as you work.
+
+| File or folder | What goes here |
+|---|---|
+| `spec.md` | Your project requirements, question, and decision |
+| [paper-sources/TEMPLATE.md](paper-sources/TEMPLATE.md) | A template to copy for each paper you read |
+| [paper-sources/notes.md](paper-sources/notes.md) | Your observations and checks |
+| [wiki/index.md](wiki/index.md) | Links to the pages Claude builds |
+| [evidence/](evidence/README.md) | Saved conversations and source snapshots |
+
+[CLAUDE.md](CLAUDE.md) defines the agent's tasks and limits. Fill in the bracketed fields in each request below.
 
 ## 1. Find and read sources
 
-Choose one requirement, assumption, or open decision in `spec.md`. For example, [the writing-project spec](spec-example.md) leaves open how to represent an author's style and how to compare passages.
-
-Ask Claude to find relevant papers.
+Choose one requirement, assumption, or open decision in your spec. The [example spec](spec-example.md), for instance, asks how to represent an author's style and test whether generated writing resembles it.
 
 ```text
 Read CLAUDE.md.
@@ -28,28 +36,21 @@ The relevant spec passage is [passage].
 Find candidate papers that could help answer [question].
 ```
 
-Choose one or more papers. If a paper is inaccessible, look for an accessible version or another source. Record what you could not read.
+Select papers from the candidates. If a paper is inaccessible, find an accessible version or another source, and note what you could not read.
 
-Open each paper and fill in a copy of [TEMPLATE.md](paper-sources/TEMPLATE.md). Use a unique, descriptive filename such as `paper-sources/style-evaluation.md`, and leave the template unchanged. Keep the original papers available, locally in `paper-sources/papers/` if useful.
+For each paper you open, copy [TEMPLATE.md](paper-sources/TEMPLATE.md) to a descriptive filename such as `paper-sources/style-evaluation.md`. Fill in the copy and leave the template unchanged. Keep the original paper available; you can save it in `paper-sources/papers/`.
 
-For a first pass, read the abstract, introduction, figures, and conclusion. These questions can guide your reading.
+Start with the abstract, introduction, figures, and conclusion. Identify the problem, the authors' approach, how it differs from earlier work, and how they judged the result. Then read the passage behind any claim you might use in your decision, including its assumptions and limits. An abstract alone may establish relevance, but not support that claim.
 
-- Why should this problem be solved?
-- What did the authors do, and how did they judge the result?
-- How did earlier work approach the problem?
-- What does this paper do differently?
+## 2. Build and connect the pages
 
-An abstract may establish broad relevance. For the claim you will use in a project decision, read the supporting passage closely, including its assumptions, comparisons, and limits.
-
-Before each build, save a copy of your source records from the repository root. If the snapshot folder exists, use an unused name here and in the comparison command below.
+Before each build, copy your source records so you can check that Claude leaves them intact. Run this from the repository root. If the destination exists, choose an unused name and use it in both commands below.
 
 ```sh
 mkdir evidence/sources-before-agent && cp -R paper-sources/. evidence/sources-before-agent/
 ```
 
-## 2. Build and connect the pages
-
-Give Claude the paths to the completed source records you want to add.
+Give Claude the completed records to use.
 
 ```text
 Read CLAUDE.md.
@@ -58,34 +59,34 @@ Build or update the wiki from these completed source records:
 [source-record paths].
 ```
 
-Read the pages in a Markdown viewer. GitHub and [Obsidian](https://obsidian.md) render the question page's diagram. Obsidian can also show the page links as a graph when you open the repository as a vault.
+Start reading at [wiki/index.md](wiki/index.md). Each source gets a page; `wiki/question.md` compares the evidence and diagrams how it bears on your decision. View the diagram on GitHub or in [Obsidian](https://obsidian.md). Opening the repo as an Obsidian vault also lets you view page links as a graph.
 
-Compare the source records with your saved copy. No output means the copies match.
+Check that the source records match your copy. No output means they match.
 
 ```sh
 diff -ru evidence/sources-before-agent paper-sources
 ```
 
-## 3. Check and reuse the wiki
+## 3. Check and query the wiki
 
-Check the claims and connections your decision depends on against the original passages and your reading notes.
+Check the claims and connections your decision depends on against the original passages.
 
-- Does the passage support the claim, including its qualifiers?
-- What inputs, data, metric, baseline, or assumptions does the result depend on?
-- Does the paper report this result, or is it an inference by Claude or by you?
+- Does each passage support the claim and its qualifiers?
+- What data, metric, baseline, or assumptions does the result depend on?
+- Is the claim a reported result, your inference, or Claude's inference?
 - For a connection between papers, what does each passage contribute?
 - Which conditions match your project, and which remain untested?
 
-Correct any errors you find. Record the passage location and whether each claim is supported, corrected, or unresolved in [your notes](paper-sources/notes.md#claim-checks). Leave unchecked claims marked as such.
+Correct errors in the pages. In [your claim checks](paper-sources/notes.md#claim-checks), record the passage location and whether the claim is supported, corrected, or unresolved. Leave claims you have not checked marked as unchecked.
 
-Ask Claude to answer from the saved wiki, in this session or a new one.
+Ask Claude to answer from the wiki, in this session or a new one.
 
 ```text
 Read CLAUDE.md.
 Use the saved wiki to answer [question].
 ```
 
-Check the answer before using it. To keep it, write `wiki/answer.md` with unchecked claims and missing evidence marked, or send this request in the same session.
+Check the answer against the cited passages. To save it, send this request in the same session.
 
 ```text
 Read CLAUDE.md.
@@ -93,10 +94,10 @@ Save the answer. I checked [claims] against [passages]
 and found [result].
 ```
 
-## 4. Make or revisit a choice
+Claude saves it in `wiki/answer.md`, preserving your checks and marking remaining claims as unchecked. You can also write that file yourself and link it from the index. Save the conversation as described in [evidence/README.md](evidence/README.md).
 
-Use the evidence you checked to choose or reconsider a benchmark, metric, baseline, or method. Name where the paper's setting differs from yours. Its results may not hold under your project's conditions.
+## 4. Make or revisit the decision
 
-Record the choice, reason, and supporting passages in your spec. You can keep the choice open and name the next check if the evidence does not settle it. If `spec.md` is a copy from another project folder, update that original and refresh the copy here.
+Record your choice, reasoning, and supporting passages in the spec. Explain where the papers' conditions differ from your project's. If the evidence does not settle the question, leave the choice open and name the next check.
 
-Repeat as new questions arise. Recheck any saved answer affected by new sources.
+If `spec.md` is a copy, update the original spec and refresh this copy. Repeat the process for new questions, and recheck saved answers when new sources affect them.
