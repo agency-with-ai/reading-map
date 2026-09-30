@@ -40,7 +40,7 @@ Follow one answer claim through a wiki page to the original passage. Revise as n
 
 Use the checked answer to choose or reconsider a benchmark, metric, baseline, method, or other part of your spec. Explain why the cited precedent fits your project and where its setting differs.
 
-Add the decision and reason to the spec in your original project folder, or leave the choice open and name the next check. Refresh the local `spec.md` copy if you continue using the wiki. Close Claude and explain the decision to your partner with the wiki and original passages available. If promised behavior changed, have them judge the affected case again. Return to [Checkoff 2](https://agencyai.mit.edu/lab3/#checkoff-2).
+Add the decision and reason to the spec in your original project folder, or leave the choice open and name the next check. Refresh the local `spec.md` copy if you continue using the wiki. Close Claude and explain the decision to your partner with the wiki and original passages available. If promised behavior changed, have them judge the affected case again. Return to [Checkoff 2](https://agencyai.mit.edu/lab3/#lab-checkoff-2).
 
 If access fails, save the error and keep checking sources by hand. Mark the agent work pending and agree on a next step with staff.
 
