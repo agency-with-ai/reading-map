@@ -18,5 +18,3 @@ Use only project material you may share with Claude and anyone reviewing your wo
 - [LLM-wiki proposal (2026)](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) describes keeping linked pages alongside original sources.
 - [Specifications (2026)](https://web.mit.edu/6.102/www/sp26/classes/04-specifications/) introduces behavior contracts.
 - [Designing specifications (2026)](https://web.mit.edu/6.102/www/sp26/classes/05-designing-specs/) discusses choosing what a contract promises.
-
-The starter is adapted from [Agency with AI course materials](https://github.com/agency-with-ai/courseware) under [CC BY-SA 4.0](LICENSE). Papers, excerpts, and your project files retain their own licenses.
