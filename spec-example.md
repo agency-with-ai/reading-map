@@ -1,53 +1,37 @@
-# Example spec for author-style writing
+# Example project: write like a professor
 
-This example develops the [author-style writing project (2026)](https://github.com/agency-with-ai/courseware/issues/5). Its structure adapts the [feature-spec template (2026)](https://github.com/github/spec-kit/blob/main/templates/spec-template.md). Use your own revised project spec as `spec.md`.
+Build a tool that writes like a chosen EECS professor. Give staff two passages, one written by the professor and one generated, and test whether they can tell which is which.
 
-## Purpose and scope
+## What I give the tool and what I get back
 
-Build a writing tool that produces short technical explanations resembling one chosen EECS professor's public writing while preserving supplied facts. The first increment covers one author and one genre, technical blog posts. Use a local script, Markdown files, and one available model. No fine-tuning or web application is required.
+I supply examples of the professor's public writing, a topic, the facts to include, an audience, and a word limit. The tool returns a draft in that professor's style.
 
-Compare a plain request to write like the author with a candidate method for representing their style. Examples plus an explicit style guide are one candidate, not a settled choice.
+For example, I might ask it to write this passage.
 
-## User scenarios and acceptance checks
+> Explain to a student who knows gradient descent why high training accuracy does not guarantee good performance on new data. Include the role of a held-out test set. Use about 200 words.
 
-### Produce a draft
+I want an explanation that sounds like the professor, not a description of their style. It should resemble how they build an argument, choose examples, and address the reader. An answer that treats training accuracy as proof of performance on new data fails, even if its prose sounds convincing.
 
-Given attributed reference samples, a factual brief, an audience, and a word limit, the tool returns a draft for each condition.
+## The first version
 
-A brief says a method worked on one dataset and has not been tested elsewhere. A draft claiming it works generally fails, however convincing its style.
+Start with one professor and one kind of writing, short technical explanations. Collect attributed public passages, keeping some for style examples and others for evaluation.
 
-### Compare the writing
+Use a local script and one available model. Compare a plain request to write like the professor with a method informed by the literature. That method might give the model example passages, explicit instructions about style, or both. I have not chosen between them yet. Use the same model, briefs, and word limits for both approaches. A web app and fine-tuning are outside this first version.
 
-Given checked drafts and reserved original passages, staff or classmates judge which passage in each pair the author wrote. They know one passage is generated but do not see the answer until afterward.
+## What would count as a good result
 
-A comparison fails its check if it reveals the answer early or pairs passages with different subject matter or substantially different lengths.
+Staff sometimes mistake generated writing for the professor's, and the method does better than the plain request. That is the hypothesis to test, not a result I can promise.
 
-## Requirements
+For each comparison, derive a factual brief from a reserved original passage without copying its wording. Pair the generated draft with that original, on the same topic and at a similar length. Do not supply the original to the generator. Tell readers that one passage is generated and reveal the answer afterward.
 
-- Accepted drafts must preserve the brief's claims, numbers, and qualifications without inventing quotations, citations, or personal experiences.
-- Keep evaluation passages out of the reference samples and style instructions. Derive factual briefs from those passages without copying their phrasing.
-- Use the same briefs, model settings, and length limits for both conditions.
-- Pair each draft with the original passage used to derive its factual brief. Match audience and approximate length. Randomize display order. Do not show one reader the same original across conditions.
-- Save drafts, sample IDs, prompts, model settings, display order, and votes. Label generated drafts in saved records.
-- Review drafts for factual changes and distinctive copied wording. Exclude failed drafts from style comparisons and report their failures separately. Shared technical terms alone do not count as copying.
+Check facts and copied phrasing before judging style. Do not invent quotations or personal experiences. Count rejected drafts as failures and report them alongside the style judgments. Keep prompts, drafts, and votes so someone else can inspect the comparison.
 
-## Success criteria
+## What I need from the literature
 
-The tool must save complete records, construct comparisons as specified, and tally votes correctly. A rejected draft remains in the records with its reason for rejection. Passing these checks does not establish that the candidate method reproduces the author's style.
+How should I show the model the professor's style? I want evidence for choosing examples, explicit style instructions, or another approach that fits this first version.
 
-For each condition, report factual and copying failures and how often readers select the generated passage as the author's. Include the number of passages and judgments. This measures identification, not reader preference. A threshold for claiming improvement remains open pending evidence and a pilot.
+How should I test the result? I need a comparison that measures resemblance to this author, rather than whether readers prefer fluent prose or recognize copied sentences. The number of passages and readers, and the threshold for claiming improvement, remain open.
 
-## Assumptions and open questions
+For Lab 3, choose one of these questions and use two relevant sources. The wiki should explain what each paper suggests trying, what it actually tested, and whether its evidence applies here. Use the checked evidence to make one choice in this spec, or explain why the choice remains open.
 
-The samples are attributable to this author, and readers can inspect separate reference samples. Whether the model encountered evaluation passages during training is unknown. A small pilot does not establish a general ability to reproduce the author's voice.
-
-## Literature task for Step 4
-
-Two project decisions need evidence.
-
-- How should the tool represent the author's style, using examples, explicit instructions, or another method?
-- How should we compare passages so readers judge author style rather than topic, fluency, or copied wording?
-
-For the lab, choose one question and two relevant sources. Follow the separate search, build, and query stages in [the wiki instructions](reading-wiki/prompts.md).
-
-Connect the papers' methods, evidence, and limits to the chosen decision. Distinguish approaches worth trying from evidence that they work. Check the supporting passages, then use the wiki to support or revise a project choice, or explain why it remains unresolved. Keep this spec unchanged while the agent builds the wiki.
+This example develops the [author-style writing project (2026)](https://github.com/agency-with-ai/courseware/issues/5). Its questions draw on the [feature-spec template (2026)](https://github.com/github/spec-kit/blob/main/templates/spec-template.md).

@@ -2,6 +2,8 @@
 
 A starter for building and checking a literature wiki around a question from your project spec. Connect papers to a project decision, check the evidence, and keep unanswered questions visible.
 
+See [Write like a professor (2026)](spec-example.md) for a worked project. Build a tool that imitates one professor's writing, then ask staff to distinguish real passages from generated ones. Its open questions give the wiki something to investigate.
+
 For [Lab 3](https://agencyai.mit.edu/lab3/), begin here at Step 4, after Checkoff 1. Write and review your project spec in your own project folder before using this starter.
 
 ## Start
@@ -24,7 +26,7 @@ The folders and templates are ready. No wiki app or package installation is need
 | File or folder | Use |
 |---|---|
 | `spec.md` | Your revised project spec, copied here by you and ignored by Git |
-| [spec-example.md](spec-example.md) | A worked author-style writing spec with literature questions about methods and evaluation |
+| [Write like a professor (2026)](spec-example.md) | A concrete writing project with a sample request and two open literature questions |
 | `lab3-note.md` | Reading notes, checked claims, project decisions, and staff feedback |
 | `reading-wiki/sources/` | Source records and your own notes |
 | `reading-wiki/wiki/` | Pages Claude creates and connects |

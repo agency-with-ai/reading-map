@@ -4,7 +4,8 @@ Use these when a step raises a specific question.
 
 | Material | Use |
 |---|---|
-| [Specification guide](specification.md) | Examples, acceptance checks, and an optional worked numerical spec |
+| [Write like a professor (2026)](../spec-example.md) | A worked project spec for writing prose and asking staff to distinguish it from the professor's writing |
+| [Read the example](specification.md) | Use the writing brief, checks, and open questions to review your own spec |
 | [Four reading questions](reading.md) | Motivation, Solution, Old idea, and Delta from Lab 2 |
 | [Check a claim](checking-claims.md) | Trace wiki claims to passages and assess whether the conditions fit |
 | [Optional search helper](optional-search.md) | Bound a small search script after the required lab work |
