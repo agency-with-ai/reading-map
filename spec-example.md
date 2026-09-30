@@ -1,6 +1,6 @@
 # Example project: write like a professor
 
-Build a tool that writes like a chosen EECS professor. Give staff two passages, one written by the professor and one generated, and test whether they can tell which is which.
+Build a tool that writes like a chosen EECS professor. Give readers two passages, one written by the professor and one generated, and test whether they can tell which is which.
 
 ## What I give the tool and what I get back
 
@@ -20,7 +20,7 @@ Use a local script and one available model. Compare a plain request to write lik
 
 ## What would count as a good result
 
-Staff sometimes mistake generated writing for the professor's, and the method does better than the plain request. That is the hypothesis to test, not a result I can promise.
+Readers sometimes mistake generated writing for the professor's, and the method does better than the plain request. That is the hypothesis to test, not a result I can promise.
 
 For each comparison, derive a factual brief from a reserved original passage without copying its wording. Pair the generated draft with that original, on the same topic and at a similar length. Do not supply the original to the generator. Tell readers that one passage is generated and reveal the answer afterward.
 
@@ -32,6 +32,6 @@ How should I show the model the professor's style? I want evidence for choosing 
 
 How should I test the result? I need a comparison that measures resemblance to this author, rather than whether readers prefer fluent prose or recognize copied sentences. The number of passages and readers, and the threshold for claiming improvement, remain open.
 
-For Lab 3, choose one of these questions and use two relevant sources. The wiki should explain what each paper suggests trying, what it actually tested, and whether its evidence applies here. Use the checked evidence to make one choice in this spec, or explain why the choice remains open.
+Start with one of these questions and two relevant sources. The wiki should explain what each paper suggests trying, what it actually tested, and whether its evidence applies here. Use the checked evidence to make one choice in this spec, or explain why the choice remains open.
 
 This example develops the [author-style writing project (2026)](https://github.com/agency-with-ai/courseware/issues/5). Its questions draw on the [feature-spec template (2026)](https://github.com/github/spec-kit/blob/main/templates/spec-template.md).

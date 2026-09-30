@@ -4,6 +4,31 @@ These are my own observations and questions. They are not evidence that a paper 
 
 ## Question from my spec
 
-## What I need to understand
+- Spec passage and project decision
+- What evidence would help me decide
+
+## Reading notes
+
+Keep your answers to the [reading questions](../README.md#1-find-and-read-sources) here, labelled by source. Mark what you have not understood or checked.
+
+### Source A
+
+### Source B
 
 ## Observations and uncertainties
+
+## Claim checks
+
+| Claim or connection | Source passage and location | Supported, corrected, or unresolved |
+|---|---|---|
+| | | |
+
+## Project decision
+
+- Choice and reason, or question left open
+- Supporting passages and limits
+- Spec file updated or next check needed
+
+## Saved exchanges
+
+Record paths to the conversations, answer, and file-read records saved in `evidence/`.
