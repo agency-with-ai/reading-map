@@ -1,12 +1,23 @@
 # Use the spec to build and check a wiki
 
-[prompts.md](prompts.md) has a request for each Claude task below. Save each exchange in `evidence/` and keep your reading notes and checks in [paper-sources/notes.md](paper-sources/notes.md).
+Each Claude task below comes with a request to send. Fill in its bracketed fields first. Save each exchange in `evidence/` and keep your reading notes and checks in [paper-sources/notes.md](paper-sources/notes.md).
 
 ## 1. Find and read sources
 
 Choose a requirement, assumption, or undecided choice in `spec.md`. The question can concern what to build or how to evaluate it. For example, [the writing-project spec](spec-example.md) leaves open both how to represent an author's style and how to compare passages. Start with one decision.
 
-Send Claude the [find request](prompts.md#find-candidate-papers) with that passage and an explicit literature question. Choose sources that could help answer it. You can start with one paper and add others as needed. If a paper is inaccessible, look for an accessible version or another relevant source. Record what you could not read.
+Send Claude this request with that passage and an explicit literature question.
+
+```text
+Read CLAUDE.md and spec.md.
+The choice I want to investigate is [choice].
+The relevant spec passage is [passage].
+Find candidate papers that could help answer [question].
+Return titles, URLs, reasons for relevance, and any access limits.
+I will choose sources and check them. Do not change or download files.
+```
+
+Choose sources that could help answer it. You can start with one paper and add others as needed. If a paper is inaccessible, look for an accessible version or another relevant source. Record what you could not read.
 
 Check that each paper exists. Copy [TEMPLATE.md](paper-sources/TEMPLATE.md) for each paper you choose, using a unique, descriptive filename such as `paper-sources/style-evaluation.md`. Leave the template unchanged. Fill each record with the title, URL, relevant passage, and its section or page number. Keep the original papers available, locally in `paper-sources/papers/` if useful.
 
@@ -27,9 +38,22 @@ mkdir evidence/sources-before-agent && cp -R paper-sources/. evidence/sources-be
 
 ## 2. Build and connect the pages
 
-Send Claude the [incorporate request](prompts.md#incorporate-sources) with the paths to the completed source records you want to add. You can supply one or several. Each record gets a page in `wiki/` with the same filename, explaining what the authors did, what they found, and what their evidence does not establish. The question page connects the sources to your spec and records what remains unanswered.
+Send Claude this request with the paths to the completed source records you want to add. You can supply one or several.
 
-Read the pages yourself. Then compare the source records with your saved copy to check that Claude left them unchanged. No output means the copies match.
+```text
+Read CLAUDE.md, spec.md, paper-sources/notes.md, and wiki/index.md.
+My question is [question], about [spec passage].
+Read these completed source records: [source-record paths].
+For each record, create or update a page in wiki/ using the same filename.
+Update wiki/question.md with what these sources support or leave open.
+Keep unaffected text and recorded checks. Mark revised claims as unchecked
+and flag conflicts with checked claims for review.
+Update the index. Write only inside wiki/. Do not browse or install anything.
+```
+
+Each record gets a page in `wiki/` with the same filename, explaining what the authors did, what they found, and what their evidence does not establish. The question page connects the sources to your spec and records what remains unanswered.
+
+Read the pages yourself in any Markdown viewer. GitHub and [Obsidian](https://obsidian.md) also draw the question page's diagram, and Obsidian shows the pages as a graph if you open the repository folder as a vault. Then compare the source records with your saved copy to check that Claude left them unchanged. No output means the copies match.
 
 ```sh
 diff -ru evidence/sources-before-agent paper-sources
@@ -47,9 +71,26 @@ Check the claims and connections your decision depends on against the original p
 
 Correct any errors you find. Record the passage location and whether each claim is supported, corrected, or unresolved in [your notes](paper-sources/notes.md#claim-checks). Leave unchecked claims marked as such.
 
-When you want an answer from the saved wiki, send the [saved-page query](prompts.md#query-saved-pages). You can use it in a new Claude session. Check the claims and connections you intend to use against the original passages.
+When you want an answer from the saved wiki, send this request. You can use it in a new Claude session.
 
-If you want to keep the answer, save it as `wiki/answer.md`, yourself or with the [save request](prompts.md#save-the-checked-answer). Mark unchecked claims and missing evidence.
+```text
+Read CLAUDE.md and wiki/index.md.
+Use the linked pages to answer [question].
+Do not browse or change files.
+Give the answer here for review.
+```
+
+Check the answer the same way before you use it.
+
+If you want to keep the answer, save it as `wiki/answer.md` and mark unchecked claims and missing evidence. You can write it yourself or, after checking the answer, send this request in the same session.
+
+```text
+Save the answer as wiki/answer.md and link it from
+wiki/index.md. I checked [claims] against [passages]
+and found [result]. Mark every other claim as unchecked and list
+the missing evidence. Update wiki/question.md to show the checks
+recorded in paper-sources/notes.md. Write only inside wiki/.
+```
 
 ## 4. Make or revisit a choice
 
