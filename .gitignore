@@ -11,7 +11,7 @@ __pycache__/
 /spec.md
 
 # Keep local source attachments and conversation exports out of routine commits.
-reading-wiki/sources/papers/*
-!reading-wiki/sources/papers/.gitkeep
+sources/papers/*
+!sources/papers/.gitkeep
 evidence/*
 !evidence/README.md

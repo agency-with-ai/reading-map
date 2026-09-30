@@ -4,11 +4,11 @@
 
 ## 1. Find and read sources
 
-Choose a requirement, assumption, or undecided choice in `spec.md`. The question can concern what to build or how to evaluate it. For example, [the writing-project spec](../spec-example.md) leaves open both how to represent an author's style and how to compare passages. Start with one decision.
+Choose a requirement, assumption, or undecided choice in `spec.md`. The question can concern what to build or how to evaluate it. For example, [the writing-project spec](spec-example.md) leaves open both how to represent an author's style and how to compare passages. Start with one decision.
 
 Send Claude the [find request](prompts.md#find-candidate-papers) with that passage and an explicit literature question. Start with two relevant sources. If a paper is inaccessible, look for an accessible version or another relevant source. Record what you could not read.
 
-Check that each paper exists and fill in [source-a.md](sources/source-a.md) and [source-b.md](sources/source-b.md). Save the title, URL, relevant passage, and its section or page number. Keep the original papers available, locally in `reading-wiki/sources/papers/` if useful.
+Check that each paper exists and fill in [source-a.md](sources/source-a.md) and [source-b.md](sources/source-b.md). Save the title, URL, relevant passage, and its section or page number. Keep the original papers available, locally in `sources/papers/` if useful.
 
 Before asking Claude to summarize the sources, skim each paper's abstract, introduction, figures, and conclusion yourself. Record brief answers in your notes and mark gaps rather than guessing.
 
@@ -22,7 +22,7 @@ An abstract may establish broad relevance. For the claim you will use in a proje
 Save a copy of your completed source records before Claude builds the wiki. Run this once from the repository root. If the snapshot folder already exists, choose another unused name and use that name in the comparison command too.
 
 ```sh
-mkdir evidence/sources-before-agent && cp -R reading-wiki/sources/. evidence/sources-before-agent/
+mkdir evidence/sources-before-agent && cp -R sources/. evidence/sources-before-agent/
 ```
 
 ## 2. Build and connect the pages
@@ -32,7 +32,7 @@ Send Claude the [first-source request](prompts.md#incorporate-the-first-source),
 Read the pages yourself. Then compare the source records with your saved copy to check that Claude left them unchanged. No output means the copies match.
 
 ```sh
-diff -ru evidence/sources-before-agent reading-wiki/sources
+diff -ru evidence/sources-before-agent sources
 ```
 
 ## 3. Check and reuse the wiki
@@ -49,7 +49,7 @@ Correct an error or record why the claim is supported. Record the passage locati
 
 Start a fresh Claude session and send the [saved-page query](prompts.md#query-the-saved-pages-in-a-fresh-session). Save the answer and any available file-read record. A fresh conversation alone does not show that Claude used the wiki.
 
-Follow one answer claim through a wiki page to the original passage. Then save the checked answer as `reading-wiki/wiki/answer.md`, yourself or with the [save request](prompts.md#save-the-checked-answer). Mark unchecked claims and missing evidence.
+Follow one answer claim through a wiki page to the original passage. Then save the checked answer as `wiki/answer.md`, yourself or with the [save request](prompts.md#save-the-checked-answer). Mark unchecked claims and missing evidence.
 
 ## 4. Make or revisit a choice
 
