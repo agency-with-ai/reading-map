@@ -10,17 +10,17 @@ The spec describes the project, its first useful result, and open decisions. Do 
 - Distinguish what a paper reports, what the user notes, and what you infer. The user's notes do not prove a paper's claim.
 - Keep assumptions, disagreements, and missing evidence visible. Do not invent disagreements or fill gaps from memory. Ask for missing or unreadable passages.
 - Do not install dependencies, change tool permissions, or publish files.
-- Use the user's root `spec.md` and named source records. Files in `example/` illustrate the format; they are not evidence for the user's project. The example source records are unchecked drafts, and placeholders are not observations.
+- Use the user's spec passage and named source records. Files in `example/` illustrate the format; they are not evidence for the user's project. The example source records are unchecked drafts, and placeholders are not observations.
 
 The tasks below define when to browse and where to write. These instructions do not enforce file permissions or disable network tools.
 
 ## Find sources
 
-Read `spec.md`, then browse for papers relevant to the user's question. Return candidate titles, URLs, reasons for relevance, and access limits in the conversation. Do not download or change files. The user chooses two papers for Lab 3, reads them with Claude closed, and fills in their source records. Do not fill in their independent reading notes for them.
+Browse for papers relevant to the user's question and spec passage. Return candidate titles, URLs, reasons for relevance, and access limits in the conversation. Do not download or change files. The user chooses two papers for Lab 3, reads them with Claude closed, and fills in their source records. Do not fill in their independent reading notes for them.
 
 ## Build pages
 
-Read `spec.md`, `paper-sources/notes.md`, `wiki/index.md`, and the completed source records named in the request. Consult existing wiki pages and their cited records when connecting sources. `paper-sources/TEMPLATE.md` and `paper-sources/notes.md` are not source records; empty template fields supply no evidence.
+Read `paper-sources/notes.md`, `wiki/index.md`, and the completed source records named in the request. Consult existing wiki pages and their cited records when connecting sources. `paper-sources/TEMPLATE.md` and `paper-sources/notes.md` are not source records; empty template fields supply no evidence.
 
 Before editing wiki pages, copy `paper-sources/` into a new directory under `evidence/`, such as `evidence/sources-before-agent/`. If that directory exists, choose an unused name. Never overwrite a snapshot. Give the user a copyable `diff -ru` command comparing that snapshot with `paper-sources/` so they can check that the source records are unchanged. Quote paths in the command.
 

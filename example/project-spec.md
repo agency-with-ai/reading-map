@@ -56,3 +56,13 @@ The literature search should inform two decisions.
 
 1. How should I show the model the author's style? Consider example passages, explicit style instructions, a combination, or another approach within scope.
 2. How should I measure success? Decide whether the paired comparison tests resemblance to the author, how many passages and readers to use, and how much improvement over the plain request counts.
+
+## Evaluation decision for the example
+
+This is an agent-authored example decision. Use the one-day version as an exploratory comparison on three reserved passages. Keep the plain request and one chosen method on the same model, briefs, and word limits. The writing method remains undecided.
+
+For every draft, record factual accuracy, copied wording, and invented quotations or personal experiences. Reject failures and include them in the results. For eligible drafts, record resemblance to the reserved original separately from readability, with a brief reason for each judgment. The project owner supplies these judgments. No reader votes or experimental results are recorded yet.
+
+The evidence supports separating dimensions, but does not settle the author-recognition task. [Mir et al.](paper-sources/style-evaluation.md), §2 and §5.2, pp. 495–496 and 499–500, distinguishes dimensions and reports a relative-judgment agreement benefit for naturalness, not style intensity. [TinyStyler](paper-sources/tinystyler.md), §4.1–4.2, pp. 13380–13382, evaluates Reddit author transfer automatically and formality with humans. Neither setting establishes reader recognition of Feynman's technical writing. The proposed procedure is an inference for this project.
+
+Open decision 2 remains partly unresolved. Before a reader study, pilot the task with reserved passages, record whether readers recognize the originals, and ask what led to each judgment. Use those observations to decide whether the task measures resemblance or mainly fluency and familiarity. Choose reader and passage counts and an improvement threshold before the main study. The two papers do not supply those choices for this project.

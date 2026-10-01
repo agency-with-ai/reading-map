@@ -11,7 +11,7 @@ cd reading-map
 
 Claude's instructions are in [CLAUDE.md](CLAUDE.md). Fill in the brackets in the prompts below.
 
-[The Feynman example](example/spec.md) shows a project spec with open literature questions. Its source records in `example/paper-sources/` are unchecked drafts, and its reading notes are incomplete.
+[The Feynman example](example/project-spec.md) shows a project spec with open literature questions. Its source records in `example/paper-sources/` are unchecked drafts, and its reading notes are incomplete.
 
 ## 1. Find and read sources
 
