@@ -16,25 +16,27 @@ The tasks below define when to browse and where to write. These instructions do 
 
 ## Find sources
 
-Browse for papers relevant to the user's question and spec passage. Save the supplied question and spec passage in `paper-sources/notes.md`. Return candidate titles, URLs, reasons for relevance, and access limits in the conversation. Let the user select papers before preparing source records.
+Browse for papers relevant to the user's question and spec passage. Save the supplied question and spec passage in `paper-sources/notes.md`, along with the spec path if supplied. Return a numbered candidate list with titles, URLs, reasons for relevance, and access limits. Let the user select papers by number or title before preparing source records.
 
 ## Prepare selected sources
 
 Retrieve the papers the user selects and save accessible copies in `paper-sources/papers/`. Record their original URLs and any access limits. Do not overwrite existing attachments or source records without inspecting them.
 
-Use `paper-sources/TEMPLATE.md` to create a descriptive source record for each selected paper. Fill in bibliographic details and relevant passages, original locations, and limits supported by the accessible text. If only an abstract is accessible, say so and do not infer findings from unread sections. Mark agent-prepared claims as unchecked by the user. Link the records from `paper-sources/notes.md`.
+Use `paper-sources/TEMPLATE.md` to create a descriptive source record for each selected paper. Fill in bibliographic details and relevant passages, original locations, and limits supported by the accessible text. If only an abstract is accessible, say so and do not infer findings from unread sections. Mark agent-prepared claims as unchecked by the user. Record the selected papers and link their source records from `paper-sources/notes.md` so a later build can find them without asking for paths.
 
 Record reading observations when the user supplies them. Keep them separate from source claims and agent inferences. Do not invent independent reading notes or claim that the user read a paper.
 
 ## Build pages
 
-Read `paper-sources/notes.md`, `map/index.md`, and the completed source records named in the request. Consult existing reading map pages and their cited records when connecting sources. `paper-sources/TEMPLATE.md` and `paper-sources/notes.md` are not source records; empty template fields supply no evidence.
+Save any reading observations supplied with the build request in `paper-sources/notes.md` before taking the source snapshot. Preserve the distinction between user observations and agent-prepared claims.
+
+Read the question and spec passage in `paper-sources/notes.md`, `map/index.md`, and the source records for the selected papers linked from the notes. Use explicitly named records if the user specifies a different selection. Ask only if the selection is ambiguous or records are missing. Consult existing reading map pages and their cited records when connecting sources. `paper-sources/TEMPLATE.md` and `paper-sources/notes.md` are not source records; empty template fields supply no evidence.
 
 Before editing the reading map, copy `paper-sources/` into a new directory under `evidence/`, such as `evidence/sources-before-agent/`. If that directory exists, choose an unused name. Never overwrite a snapshot. After building, run `diff -ru` comparing that snapshot with `paper-sources/`. Report the copyable command, exit code, and differences. Quote paths in the command. This is an agent integrity check, not a user claim check.
 
-Write only in `map/`, except when creating this snapshot in `evidence/`. Do not browse or download.
+After saving the supplied observations, write only in `map/`, except when creating this snapshot in `evidence/`. Do not browse or download.
 
-For each named source record, create or update a short page explaining what the authors did, what they found, and what their evidence does not establish. Use the record's filename for its page. Reserve `index.md`, `question.md`, and `answer.md` for shared pages. Ask for a different filename if one would overwrite a reserved page or a page about another paper.
+For each selected source record, create or update a short page explaining what the authors did, what they found, and what their evidence does not establish. Use the record's filename for its page. Reserve `index.md`, `question.md`, and `answer.md` for shared pages. Ask for a different filename if one would overwrite a reserved page or a page about another paper.
 
 Link factual claims to their source records and identify the original section, page, or equation. Use relative Markdown links. Add each source page to `map/index.md` with a one-sentence description.
 
@@ -44,7 +46,7 @@ Preserve unaffected text and recorded checks. Mark revised claims as unchecked a
 
 ## Answer from saved pages
 
-Start at `map/index.md` and read the pages it links. Consult their cited source records as needed. Do not read the papers in `paper-sources/papers/`; this task tests what the saved pages support.
+Use the question supplied in the request, or retrieve the project question from `paper-sources/notes.md`. Ask if no question is recorded or the intended question is ambiguous. Start reading the map at `map/index.md` and read the pages it links. Consult their cited source records as needed. Do not read the papers in `paper-sources/papers/`; this task tests what the saved pages support.
 
 Answer in the conversation. Cite supporting pages and original passage locations, and state what remains unresolved. Do not browse or change files.
 
@@ -62,7 +64,9 @@ When the user supplies claim checks, record the original passage locations and f
 
 When asked to link conversation exports, confirm the named files exist and link them from the notes. Report missing files. Do not fabricate a transcript or label a summary as an export. If exporting requires a host application command, tell the user the command rather than claiming to have run it.
 
-When the user supplies a project decision or an open question, update the named spec and the project decision section in `paper-sources/notes.md`. Include supporting passages, limits, and any next check. Preserve unrelated spec content. If the spec path is missing, ask for it rather than guessing.
+When the user supplies a project decision or an open question, use the spec path already supplied in the conversation or recorded in `paper-sources/notes.md`. Ask for the path only if it is unknown or ambiguous, and record it for subsequent use. Update the spec and the project decision section in the notes. Retrieve supporting passages, limits, and possible next checks from the reading map rather than asking the user to copy them. Distinguish proposed next checks from user decisions; say when evidence is missing or does not support the decision. Preserve unrelated spec content.
+
+When saving the decision, also link available `evidence/map-build.txt` and `evidence/map-query.txt` exports from the saved exchanges section in the notes. Use alternative export paths if the user supplied them. Report missing exports without blocking the decision update or inventing their contents.
 
 ## Discuss an optional recurring search
 
