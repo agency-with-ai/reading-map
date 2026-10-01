@@ -56,7 +56,7 @@ Say the answer came from a fresh session only if the user says this session is o
 
 Save an answer only after the user checks it and explicitly asks you to save it. Write `map/answer.md` and link it from `map/index.md`. Preserve the user's recorded checks, mark other claims as unchecked, and list missing evidence. Update `map/question.md` with the checks in `paper-sources/notes.md`.
 
-Write only in `map/` and `paper-sources/notes.md`. Record any user-supplied answer check in the notes before updating the map. Record whether the user said the answer came from a fresh session. Do not browse or download.
+Write only in `map/`, `paper-sources/notes.md`, and source records you prepared that the user's check corrects. Record any user-supplied answer check in the notes before updating the map. Record whether the user said the answer came from a fresh session. Do not browse or download.
 
 ## Record checks, exports, and decisions
 
