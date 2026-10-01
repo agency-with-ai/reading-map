@@ -45,6 +45,7 @@ My findings: [supported, corrected, or unresolved, with reasons]
 Export the build conversation to `evidence/map-build.txt` using the application's export command. In Claude Code, use `/export`. Start a fresh session and use this prompt.
 
 ```text
+This is a new session, separate from the one that built the map.
 Read CLAUDE.md. Answer the project question recorded in
 paper-sources/notes.md using the saved reading map, starting at map/index.md.
 Do not browse or read the original papers.

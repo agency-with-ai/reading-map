@@ -50,13 +50,13 @@ Use the question supplied in the request, or retrieve the project question from 
 
 Answer in the conversation. Cite supporting pages and original passage locations, and state what remains unresolved. Do not browse or change files.
 
-Do not claim an answer came from a fresh session unless it did. Do not use a previous conversational answer as evidence missing from the saved pages.
+Say the answer came from a fresh session only if the user says this session is one. Attribute observations already recorded on the pages to those pages, not to yourself. Do not use a previous conversational answer as evidence missing from the saved pages.
 
 ## Save an answer
 
 Save an answer only after the user checks it and explicitly asks you to save it. Write `map/answer.md` and link it from `map/index.md`. Preserve the user's recorded checks, mark other claims as unchecked, and list missing evidence. Update `map/question.md` with the checks in `paper-sources/notes.md`.
 
-Write only in `map/` and `paper-sources/notes.md`. Record any user-supplied answer check in the notes before updating the map. Do not browse or download.
+Write only in `map/` and `paper-sources/notes.md`. Record any user-supplied answer check in the notes before updating the map. Record whether the user said the answer came from a fresh session. Do not browse or download.
 
 ## Record checks, exports, and decisions
 
