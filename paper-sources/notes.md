@@ -10,7 +10,7 @@ Keep your observations, questions, and checks here. Use each paper's source reco
 
 ## Reading notes
 
-For Lab 3, choose two papers and write these notes with Claude closed. Add a heading for each paper and link to its source record. Record observations, questions, and uncertainties that bear on your decision.
+Add a heading for each paper and link to its source record. Record observations, questions, and uncertainties that bear on your decision.
 
 Start with the abstract, introduction, figures, and conclusion. Identify the problem, the authors' approach, how it differs from earlier work, and how they judged the result. Then read the passage behind any claim you might use in your decision, including its assumptions and limits. An abstract alone can establish relevance but cannot support that claim.
 
@@ -28,7 +28,7 @@ For each claim you check, record the original passage and your result. Correct a
 |---|---|---|
 | | | |
 
-Check at least one factual claim from the wiki, one connection between the two papers, and one claim from the fresh-session answer. Identify which check each row records.
+Note which of the lab's checks each row records.
 
 ## Fresh-session answer
 
@@ -42,8 +42,6 @@ Check at least one factual claim from the wiki, one connection between the two p
 - Choice and reason, or question left open
 - Supporting passages and limits
 - Spec file updated or next check needed
-- Partner's interpretation with Claude closed
-- If a requirement changed, their judgment of the Step 3 case and any further revision
 
 ## Saved exchanges
 
