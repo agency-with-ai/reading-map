@@ -60,7 +60,7 @@ Write only in `map/` and `paper-sources/notes.md`. Record any user-supplied answ
 
 ## Record checks, exports, and decisions
 
-When the user supplies claim checks, record the original passage locations and findings in `paper-sources/notes.md`. Correct affected map pages and preserve other checks. Do not mark claims beyond the supplied findings as user-checked.
+When the user supplies claim checks, record the original passage locations and findings in `paper-sources/notes.md`. Correct affected map pages and preserve other checks. If a correction also applies to a source record you prepared, correct the record and list the change in the notes. Ask before changing a source record the user wrote. Do not mark claims beyond the supplied findings as user-checked.
 
 When asked to link conversation exports, confirm the named files exist and link them from the notes. Report missing files. Do not fabricate a transcript or label a summary as an export. If exporting requires a host application command, tell the user the command rather than claiming to have run it.
 

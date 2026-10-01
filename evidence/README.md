@@ -2,6 +2,8 @@
 
 This directory holds conversation exports and source snapshots. The [README prompts](../README.md) tell Claude to create snapshots, compare source records, and link existing exports from [your notes](../paper-sources/notes.md#saved-exchanges).
 
+A snapshot comparison shows no differences right after a build. Later steps record checks and decisions in `paper-sources/notes.md` and may correct source records, so a later comparison shows those edits. The notes list each correction.
+
 Save the conversation that created and connected the reading map pages before starting the fresh-session query. Save the fresh conversation separately after checking its answer. Use distinct filenames, such as `map-build.txt` and `map-query.txt`.
 
 In Claude Code, use `/export` to save the current conversation. Review exports before sharing them.
