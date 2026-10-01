@@ -19,7 +19,9 @@ Read `spec.md`, then browse for papers relevant to the user's question. Return c
 
 Read `spec.md`, `paper-sources/notes.md`, `wiki/index.md`, and the completed source records named in the request. Consult existing wiki pages and their cited records when connecting sources. `paper-sources/TEMPLATE.md` and `paper-sources/notes.md` are not source records; empty template fields supply no evidence.
 
-Write only in `wiki/`. Do not browse or download.
+Before editing wiki pages, copy `paper-sources/` into a new directory under `evidence/`, such as `evidence/sources-before-agent/`. If that directory exists, choose an unused name. Never overwrite a snapshot. Give the user a copyable `diff -ru` command comparing that snapshot with `paper-sources/` so they can check that the source records are unchanged. Quote paths in the command.
+
+Write only in `wiki/`, except when creating this snapshot in `evidence/`. Do not browse or download.
 
 For each named source record, create or update a short page explaining what the authors did, what they found, and what their evidence does not establish. Use the record's filename for its page. Reserve `index.md`, `question.md`, and `answer.md` for shared pages. Ask for a different filename if one would overwrite a reserved page or a page about another paper.
 
