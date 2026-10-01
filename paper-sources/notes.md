@@ -5,7 +5,7 @@ Keep your observations, questions, and checks here. Use each paper's source reco
 ## Question from my spec
 
 - Spec passage and decision to investigate
-- Open question to ask the wiki
+- Open question to ask the reading map
 - Evidence I need to decide
 
 ## Reading notes
@@ -16,7 +16,7 @@ Start with the abstract, introduction, figures, and conclusion. Identify the pro
 
 ## Claim checks
 
-For each claim you check, record the original passage and your result. Correct any errors in the wiki pages and record each correction here. Leave claims you have not checked marked as unchecked.
+For each claim you check, record the original passage and your result. Correct any errors in the reading map and record each correction here. Leave claims you have not checked marked as unchecked.
 
 - Does each passage support the claim and its qualifiers?
 - What data, metric, baseline, or assumptions does the result depend on?
@@ -34,7 +34,7 @@ Note which of the lab's checks each row records.
 
 - Question asked and pages cited in the answer
 - Claim checked against the original passage and result of that check
-- What the saved wiki could answer and what remains unresolved
+- What the saved reading map could answer and what remains unresolved
 - Link to the saved answer, if created
 
 ## Project decision
@@ -45,4 +45,4 @@ Note which of the lab's checks each row records.
 
 ## Saved exchanges
 
-Link to both the conversation that built the wiki and the fresh-session query in `evidence/`, and to any saved answer in `wiki/answer.md`.
+Link to both the conversation that built the reading map and the fresh-session query in `evidence/`, and to any saved answer in `map/answer.md`.

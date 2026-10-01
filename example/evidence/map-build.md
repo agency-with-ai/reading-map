@@ -1,4 +1,4 @@
-# Wiki build record
+# Reading map build record
 
 This is an agent-written run record, not a verbatim conversation export.
 
@@ -9,7 +9,7 @@ Run the Feynman example using the local Lab 3 instructions and record the result
 ## Build input
 
 ```text
-Build the example wiki pages.
+Build the example reading map.
 Question: How should we test whether a generated technical explanation
 resembles Feynman's writing?
 Spec passage: example/project-spec.md, Comparison procedure and open decision 2.
@@ -17,18 +17,18 @@ Source records:
 - example/paper-sources/style-evaluation.md
 - example/paper-sources/tinystyler.md
 Treat these as agent-prepared drafts, not user-checked records.
-Write the wiki under example/wiki/.
+Write the reading map under example/map/.
 ```
 
 This block records the build task used in this session; it is not a quotation of a separate user exchange. The build uses the named records. Browsing and PDF inspection belong to source preparation and agent checking.
 
 ## Outputs
 
-The [index](../wiki/index.md), [Mir page](../wiki/style-evaluation.md), [TinyStyler page](../wiki/tinystyler.md), and [question page](../wiki/question.md) supply the wiki. The question page has a comparison table and Mermaid diagram. It distinguishes source claims from project inferences.
+The [index](../map/index.md), [Mir page](../map/style-evaluation.md), [TinyStyler page](../map/tinystyler.md), and [question page](../map/question.md) make up the reading map. The question page has a comparison table and Mermaid diagram. It distinguishes source claims from project inferences.
 
 ## Source integrity
 
-The source directory is copied before wiki construction to [sources-before-agent](sources-before-agent/). The snapshot is archival evidence. Its relative links retain their original source-directory context; navigate the current [research notes](../paper-sources/notes.md) instead.
+Before the reading map is built, the source directory is copied to [sources-before-agent](sources-before-agent/). The snapshot is archival evidence. Its relative links retain their original source-directory context; navigate the current [research notes](../paper-sources/notes.md) instead.
 
 Run this from the repository root:
 

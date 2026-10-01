@@ -1,4 +1,4 @@
-# Answer draft from the saved wiki
+# Answer draft from the saved reading map
 
 **Status.** Same-session agent rehearsal, unchecked by the user. This is not a fresh-session result or a saved checked answer. The agent has already seen the original papers.
 

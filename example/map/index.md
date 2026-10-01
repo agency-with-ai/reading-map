@@ -1,4 +1,4 @@
-# Example literature wiki
+# Example reading map
 
 Question: How should we test whether a generated technical explanation resembles Feynman's writing?
 

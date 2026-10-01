@@ -36,7 +36,7 @@ Pending. No partner case, partner interpretation, or staff feedback is recorded.
 
 ## Step 4. Reading map and decision
 
-The [research notes](paper-sources/notes.md) document both papers with Lab 2's four questions. The [wiki](wiki/index.md) connects their evidence to open decision 2. The [agent checks](evidence/agent-checks.md) compare a factual claim, a connection, and an answer claim with original passages.
+The [research notes](paper-sources/notes.md) document both papers with Lab 2's four questions. The [reading map](map/index.md) connects their evidence to open decision 2. The [agent checks](evidence/agent-checks.md) compare a factual claim, a connection, and an answer claim with original passages.
 
 TinyStyler supplies an author-style evaluation setting, while Mir et al. supplies evidence about human judgment tasks. Together they make the missing evidence concrete. Neither tests whether readers recognize Feynman's style in technical explanations.
 
@@ -50,7 +50,7 @@ The [spec decision](project-spec.md#evaluation-decision-for-the-example) keeps t
 | What evidence supports the choice? | Mir et al. §2 and §5.2 distinguish dimensions and limit the agreement result to naturalness. TinyStyler §4.1–4.2 distinguishes author metrics from human formality judgments. |
 | How did the spec guide the reading? | The desired result is resemblance to a named author, so the decisive check is whether a study actually tests that outcome with people. |
 
-Partner explanation, reconsideration of the partner's case, and staff Checkoff 2 are pending. The [run records](evidence/wiki-build.md) are summaries; actual conversation exports are pending too.
+Partner explanation, reconsideration of the partner's case, and staff Checkoff 2 are pending. The [run records](evidence/map-build.md) are summaries; actual conversation exports are pending too.
 
 ## Next coding question
 

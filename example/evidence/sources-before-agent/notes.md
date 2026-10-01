@@ -49,10 +49,10 @@ The [agent check ledger](../evidence/agent-checks.md) records a factual claim, a
 
 Use the [one-day evaluation decision](../project-spec.md#evaluation-decision-for-the-example) as an exploratory comparison. Keep facts, copied wording, and invented experiences as rejection checks. Record style resemblance and readability separately. Leave the reader-study design, reader and passage counts, and improvement threshold open.
 
-This is an agent-authored example decision, supported by the limited connections in [the question page](../wiki/question.md). No explanations, reader votes, or model performance measurements are part of this run.
+This is an agent-authored example decision, supported by the limited connections in [the question page](../map/question.md). No explanations, reader votes, or model performance measurements are part of this run.
 
 ## Saved exchanges
 
-The [build record](../evidence/wiki-build.md) and [query record](../evidence/wiki-query.md) are agent-written run records, not conversation exports. The [answer draft](../wiki/answer-draft.md) is from this same session. A fresh-session query, its export, and a user-checked answer remain pending.
+The [build record](../evidence/map-build.md) and [query record](../evidence/map-query.md) are agent-written run records, not conversation exports. The [answer draft](../map/answer-draft.md) is from this same session. A fresh-session query, its export, and a user-checked answer remain pending.
 
-The [source snapshot](../evidence/sources-before-agent/) captures this directory before wiki construction. Checks and execution results live outside it so the records remain comparable.
+The [source snapshot](../evidence/sources-before-agent/) captures this directory before the reading map was built. Checks and execution results live outside it so the records remain comparable.

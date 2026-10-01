@@ -1,8 +1,8 @@
-# Literature wiki
+# Reading map
 
 No source pages yet. Claude adds a link and a one-sentence description for each page it builds.
 
-## Viewing the wiki
+## Viewing the reading map
 
 `question.md` compares the evidence and diagrams how it bears on your decision. View the diagram on GitHub or open the repository root as an [Obsidian](https://obsidian.md) vault. Obsidian also lets you view page links as a graph.
 

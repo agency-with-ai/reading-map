@@ -20,23 +20,23 @@ Browse for papers relevant to the user's question and spec passage. Return candi
 
 ## Build pages
 
-Read `paper-sources/notes.md`, `wiki/index.md`, and the completed source records named in the request. Consult existing wiki pages and their cited records when connecting sources. `paper-sources/TEMPLATE.md` and `paper-sources/notes.md` are not source records; empty template fields supply no evidence.
+Read `paper-sources/notes.md`, `map/index.md`, and the completed source records named in the request. Consult existing reading map pages and their cited records when connecting sources. `paper-sources/TEMPLATE.md` and `paper-sources/notes.md` are not source records; empty template fields supply no evidence.
 
-Before editing wiki pages, copy `paper-sources/` into a new directory under `evidence/`, such as `evidence/sources-before-agent/`. If that directory exists, choose an unused name. Never overwrite a snapshot. Give the user a copyable `diff -ru` command comparing that snapshot with `paper-sources/` so they can check that the source records are unchanged. Quote paths in the command.
+Before editing the reading map, copy `paper-sources/` into a new directory under `evidence/`, such as `evidence/sources-before-agent/`. If that directory exists, choose an unused name. Never overwrite a snapshot. Give the user a copyable `diff -ru` command comparing that snapshot with `paper-sources/` so they can check that the source records are unchanged. Quote paths in the command.
 
-Write only in `wiki/`, except when creating this snapshot in `evidence/`. Do not browse or download.
+Write only in `map/`, except when creating this snapshot in `evidence/`. Do not browse or download.
 
 For each named source record, create or update a short page explaining what the authors did, what they found, and what their evidence does not establish. Use the record's filename for its page. Reserve `index.md`, `question.md`, and `answer.md` for shared pages. Ask for a different filename if one would overwrite a reserved page or a page about another paper.
 
-Link factual claims to their source records and identify the original section, page, or equation. Use relative Markdown links. Add each source page to `wiki/index.md` with a one-sentence description.
+Link factual claims to their source records and identify the original section, page, or equation. Use relative Markdown links. Add each source page to `map/index.md` with a one-sentence description.
 
-Update `wiki/question.md` with what the sources support and leave open. Include a comparison table with one row per point the decision depends on, such as method, evaluation, or differences from the spec's setting. Below it, draw a small Mermaid flowchart connecting sources to claims and claims to the decision. Use dashed lines for inferred or untested connections.
+Update `map/question.md` with what the sources support and leave open. Include a comparison table with one row per point the decision depends on, such as method, evaluation, or differences from the spec's setting. Below it, draw a small Mermaid flowchart connecting sources to claims and claims to the decision. Use dashed lines for inferred or untested connections.
 
 Preserve unaffected text and recorded checks. Mark revised claims as unchecked and flag conflicts with checked claims for the user to review.
 
 ## Answer from saved pages
 
-Start at `wiki/index.md` and read the pages it links. Consult their cited source records as needed. Do not read the papers in `paper-sources/papers/`; this task tests what the saved pages support.
+Start at `map/index.md` and read the pages it links. Consult their cited source records as needed. Do not read the papers in `paper-sources/papers/`; this task tests what the saved pages support.
 
 Answer in the conversation. Cite supporting pages and original passage locations, and state what remains unresolved. Do not browse or change files.
 
@@ -44,9 +44,9 @@ Lab 3 uses a fresh session for this task. Do not claim an answer came from a fre
 
 ## Save an answer
 
-Save an answer only after the user checks it and explicitly asks you to save it. Write `wiki/answer.md` and link it from `wiki/index.md`. Preserve the user's recorded checks, mark other claims as unchecked, and list missing evidence. Update `wiki/question.md` with the checks in `paper-sources/notes.md`.
+Save an answer only after the user checks it and explicitly asks you to save it. Write `map/answer.md` and link it from `map/index.md`. Preserve the user's recorded checks, mark other claims as unchecked, and list missing evidence. Update `map/question.md` with the checks in `paper-sources/notes.md`.
 
-Write only in `wiki/`. Do not browse or download.
+Write only in `map/`. Do not browse or download.
 
 ## Discuss an optional recurring search
 
