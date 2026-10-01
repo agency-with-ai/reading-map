@@ -1,8 +1,11 @@
 # Reading Map
 
-Files and prompts for building a reading map from papers that bear on a project question.
+Files and prompts for building a reading map from papers that bear on a project question. 
 
-Claude's instructions are in [CLAUDE.md](CLAUDE.md). Fill in the brackets in the prompts below. The [Feynman example](example/README.md) includes source records, a reading map, and a worked example.
+Open terminal inside your local copy of this repo and ask Claude to give you a sense of the repo structure. 
+You can then skim through the folders. The [Feynman example](example/README.md) includes the specification example, and the end result an agent run produced (including source records, a reading map, etc.)
+
+The prompts below are copiabel, and they help walk you through the individual steps. You should fill in your own questions or improvise with Claude.
 
 ## 1. Find and read sources
 
