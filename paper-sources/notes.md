@@ -4,9 +4,9 @@ Keep your observations, questions, and checks here. Use each paper's source reco
 
 ## Question from my spec
 
+- Spec path
 - Spec passage and decision to investigate
 - Open question to ask the reading map
-- Evidence I need to decide
 
 ## Reading notes
 

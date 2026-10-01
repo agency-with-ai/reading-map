@@ -13,6 +13,7 @@ The prompts below are copyable, and they help walk you through the individual st
 Find candidate papers.
 Question: [question]
 Spec passage: [spec passage]
+Spec path: [path to your spec file]
 ```
 
 Take a look at the sweeping result, identify papers you'd read closely and ask Claude to keep a record:
