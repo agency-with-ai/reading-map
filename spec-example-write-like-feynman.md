@@ -10,7 +10,7 @@ This version covers one author and one kind of writing. Use a local script and s
 
 I supply passages from Feynman's published lectures and books, the facts to include, an audience, and a word limit. The tool returns an explanation that resembles how he builds an argument, chooses examples, and addresses the reader.
 
-For example, an explanation for a student who knows gradient descent might cover why high training accuracy does not guarantee good performance on new data. It could also explain the role of a held-out test set. A draft that treats training accuracy as proof of performance on new data fails, even if it sounds convincing.
+For example, an explanation for a student who knows gradient descent covers why high training accuracy does not guarantee good performance on new data. It also explains the role of a held-out test set. A draft that treats training accuracy as proof of performance on new data fails, even if it sounds convincing.
 
 ## Comparison procedure
 
@@ -20,9 +20,9 @@ For each reserved passage, prepare a factual brief without copying its wording. 
 
 Choose the method before generating drafts. Use both that method and the plain request, keeping the model, briefs, and word limits the same.
 
-Before collecting reader votes, set the comparison design, the number of passages and readers, and how much better the method must perform to count as an improvement.
+Before collecting reader votes, settle open decision 2 below.
 
-Pair each generated draft with its reserved original on the same topic and at a similar length. Tell readers that one passage is generated and ask which one. Reveal the answer after they vote.
+Unless the literature points to a better design, pair each generated draft with its reserved original on the same topic and at a similar length. Tell readers that one passage is generated and ask which one. Reveal the answer after they vote.
 
 The comparison should measure resemblance to the author, rather than a preference for fluent prose or recognition of a familiar passage.
 
@@ -39,4 +39,4 @@ I assume some of Feynman's published passages are obscure enough that neither re
 The literature search should inform two decisions.
 
 1. How should I show the model the author's style? Consider example passages, explicit style instructions, a combination, or another approach within scope.
-2. How should I measure success? Choose a comparison that tests resemblance to the author and measures improvement over the plain request.
+2. How should I measure success? Decide whether the paired comparison tests resemblance to the author, how many passages and readers to use, and how much improvement over the plain request counts.

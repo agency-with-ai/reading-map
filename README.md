@@ -9,7 +9,7 @@ git clone https://github.com/agency-with-ai/reading-map.git
 cd reading-map
 ```
 
-Copy your project spec to `spec.md`. The examples below use [the Feynman spec](spec-example-write-like-feynman.md). Keep your copy local or private, and use material you may share with Claude and your reviewers.
+Copy your project spec to `spec.md`. The examples below use [the Feynman spec](spec-example-write-like-feynman.md). Keep your copy local or private, and use only material you may share with Claude and your reviewers.
 
 Open this folder in Claude Code, which reads [CLAUDE.md](CLAUDE.md) for its instructions. Fill in the brackets in the prompts below.
 
@@ -17,32 +17,36 @@ Open this folder in Claude Code, which reads [CLAUDE.md](CLAUDE.md) for its inst
 
 Choose one open question from your spec.
 
-For the Feynman project, ask “How should we test whether a generated passage resembles Feynman's writing?” Use the spec's comparison procedure as context.
+For the Feynman project, the question could be "How should we test whether a generated passage resembles Feynman's writing?" The spec passage could be its Comparison procedure section.
 
 ```text
-Find candidate papers about [question], using [spec passage].
+Find candidate papers.
+Question: [question]
+Spec passage: [spec passage]
 ```
 
-Select papers you can access. For each, copy [the source template](paper-sources/TEMPLATE.md) to a descriptive filename in `paper-sources/` and fill it in. Keep the original paper available.
+Select papers you can access. Save each one in `paper-sources/papers/` or note its URL. You need the original to check claims in step 3.
 
-Identify the problem, approach, difference from earlier work, and how the authors judged the result. Read the passages your decision depends on. Record your observations in [your notes](paper-sources/notes.md#reading-notes).
+Read each paper using the prompts in [your reading notes](paper-sources/notes.md#reading-notes), and record your observations there. Then copy [the source template](paper-sources/TEMPLATE.md) to a descriptive filename in `paper-sources/` and fill it in.
 
 ## 2. Build and connect the pages
 
 Continue with that question and the source records you filled in. For the Feynman project, the wiki should help compare ways to judge resemblance to an author.
 
 ```text
-Build the wiki to help answer [question] about [spec passage].
-Use these completed source records: [paths].
+Build the wiki pages.
+Question: [question]
+Spec passage: [spec passage]
+Source records: [paths]
 ```
 
-Start at [wiki/index.md](wiki/index.md). Read the source summaries and the comparison of evidence for your decision.
+Start at [wiki/index.md](wiki/index.md). Read the source pages, then `wiki/question.md`, which compares the sources and connects them to your decision.
 
-Claude saves a copy of your source records before building. Run the comparison command it provides; no output means the records match.
+Before building, Claude copies your source records into `evidence/`. Run the `diff` command it gives you. No output means Claude left your records unchanged.
 
 ## 3. Check and query the wiki
 
-Check a factual claim and a connection between papers against the original passages. Record the passages and any corrections in [your claim checks](paper-sources/notes.md#claim-checks), which include more detailed questions.
+Check at least one factual claim and one connection between papers against the original passages. Record each passage and any correction in [your claim checks](paper-sources/notes.md#claim-checks). That section of your notes lists questions to ask.
 
 For example, if the wiki recommends an evaluation method for the Feynman project, check whether the cited paper tests resemblance to a particular author or only fluent writing.
 
@@ -61,8 +65,8 @@ Save the conversation using [these instructions](evidence/README.md).
 
 ## 4. Make or revisit the decision
 
-Record your choice, reasoning, and supporting passages in the spec. Explain any differences between the papers' conditions and your project's. If the evidence is insufficient, leave the question open and name the next check.
+Record your choice, reasoning, and supporting passages in `spec.md`. Explain any differences between the papers' conditions and your project's. If the evidence is insufficient, leave the question open and name the next check.
 
-A hypothetical Feynman decision is to keep the blind comparison with reserved originals and first check whether readers recognize those originals. Adopt it only if your evidence supports it.
+A hypothetical Feynman decision is to keep the spec's paired comparison with reserved originals and first check whether readers recognize those originals. Adopt it only if your evidence supports it.
 
-If `spec.md` is a copy, update the original too. Recheck saved answers when new sources affect them.
+Copy the same changes to your original spec. Recheck saved answers when new sources affect them.

@@ -1,6 +1,6 @@
 # Saved evidence
 
-Keep conversation exports, file-read records, and source snapshots here. Link saved exchanges from [your notes](../paper-sources/notes.md#saved-exchanges). Label errors and incomplete runs.
+Keep conversation exports and source snapshots here. Link each export from [your notes](../paper-sources/notes.md#saved-exchanges), and note any conversation that ended in an error or stopped early.
 
 In Claude Code, use `/export` to save the current conversation. Review exports before sharing them.
 

@@ -1,6 +1,6 @@
 # Source record
 
-Fill in a copy for each paper you open. Leave missing information marked as missing.
+Fill in a copy for each paper you open. If you can't find a field, write "not found" instead of leaving it blank or guessing.
 
 - Title
 - Authors and year
