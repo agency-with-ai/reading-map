@@ -4,15 +4,22 @@ Keep your observations, questions, and checks here. Use each paper's source reco
 
 ## Question from my spec
 
-- Spec passage and decision to investigate
-- Open question to ask the wiki
-- Evidence I need to decide
+- Spec passage and decision to investigate: the Comparison procedure section and open decision 2, how to measure success.
+- Evidence I need to decide: how other work tests whether generated text resembles a particular author, and whether readers can make that judgment reliably.
 
 ## Reading notes
 
-For Lab 3, choose two papers and write these notes with Claude closed. Add a heading for each paper and link to its source record. Record observations, questions, and uncertainties that bear on your decision.
+Add a heading for each paper and link to its source record. Record observations, questions, and uncertainties that bear on your decision.
 
 Start with the abstract, introduction, figures, and conclusion. Identify the problem, the authors' approach, how it differs from earlier work, and how they judged the result. Then read the passage behind any claim you might use in your decision, including its assumptions and limits. An abstract alone can establish relevance but cannot support that claim.
+
+### [Evaluating Style Transfer for Text](style-evaluation.md)
+
+TODO: two or three lines of your own observations.
+
+### [TinyStyler](tinystyler.md)
+
+TODO: two or three lines of your own observations.
 
 ## Claim checks
 
@@ -28,23 +35,12 @@ For each claim you check, record the original passage and your result. Correct a
 |---|---|---|
 | | | |
 
-Check at least one factual claim from the wiki, one connection between the two papers, and one claim from the fresh-session answer. Identify which check each row records.
-
-## Fresh-session answer
-
-- Question asked and pages cited in the answer
-- Claim checked against the original passage and result of that check
-- What the saved wiki could answer and what remains unresolved
-- Link to the saved answer, if created
-
 ## Project decision
 
 - Choice and reason, or question left open
 - Supporting passages and limits
 - Spec file updated or next check needed
-- Partner's interpretation with Claude closed
-- If a requirement changed, their judgment of the Step 3 case and any further revision
 
 ## Saved exchanges
 
-Link to both the conversation that built the wiki and the fresh-session query in `evidence/`, and to any saved answer in `wiki/answer.md`.
+Link to the conversation exports in `evidence/` and to any saved answer in `wiki/answer.md`.
