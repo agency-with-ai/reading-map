@@ -39,7 +39,7 @@ Observations, questions, and uncertainties: [your notes]
 ## 2. Build and connect the pages
 
 ```text
-Build the reading map from these source records: [paths].
+Build the reading map from the source records you (Claude) prepared in this thread.
 Use the question and spec passage in paper-sources/notes.md.
 Snapshot paper-sources/ in a new directory under evidence/ before building.
 Create linked source pages and a comparison page under map/, starting
