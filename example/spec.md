@@ -2,21 +2,31 @@
 
 ## Goal and scope
 
-Build a tool that drafts short technical explanations in Richard Feynman's style. Test whether readers mistake the drafts for his writing. Compare a method chosen from the literature with a plain request to write like him.
+Eventually I would like a tool that can imitate anyone's writing style. This first version covers one author, Richard Feynman, and one kind of writing, short technical explanations. It is for people who want a technical idea explained to a particular audience, such as a student learning a topic or a teacher preparing notes.
 
-This version covers one author and one kind of writing. Use a local script and save the prompts, drafts, and reader votes for others to inspect. A web app and fine-tuning are outside the scope. The model and script design are open.
+Test whether readers mistake the drafts for Feynman's writing. Compare a method chosen from the literature with a plain one-line request to write like Feynman.
+
+Use a local script and save the prompts, drafts, and reader votes for others to inspect. A web app and fine-tuning are outside the scope. The model and script design are open.
 
 ## Inputs and output
 
-I supply passages from Feynman's published lectures and books, the facts to include, an audience, and a word limit. The tool returns an explanation that resembles how he builds an argument, chooses examples, and addresses the reader.
+The user supplies a topic, an audience, and a word limit. The tool returns an explanation that resembles how Feynman builds an argument, chooses examples, and addresses the reader.
 
-For example, an explanation for a student who knows gradient descent covers why high training accuracy does not guarantee good performance on new data. It also explains the role of a held-out test set. A draft that treats training accuracy as proof of performance on new data fails, even if it sounds convincing.
+Feynman's published writing is part of building the tool, not an input. I collect it as described in the comparison procedure below.
+
+For example, a user asks for a 200-word explanation of overfitting for a college student. A good draft explains why high training accuracy does not guarantee good performance on new data, and the role of a held-out test set. A draft that treats training accuracy as proof of performance on new data fails, even if it sounds convincing.
+
+## One-day version
+
+Keep the plain request, one version of the method, and three reserved passages. Judge each pair myself instead of recruiting readers. Leave out the reader comparison and the improvement threshold.
+
+This version is useful if method drafts pass the fact and copying checks and read closer to the reserved originals than the plain drafts do. It cannot show whether readers mistake the drafts for Feynman's writing.
 
 ## Comparison procedure
 
 Collect attributed passages from the author's published writing. Use some as style examples and reserve others for evaluation. Prefer reserved passages that readers are unlikely to have read.
 
-For each reserved passage, prepare a factual brief without copying its wording. Give the generator the brief, but not the original passage.
+For each reserved passage, prepare a factual brief without copying its wording. Give the tool the brief in place of a topic, but not the original passage.
 
 Choose the method before generating drafts. Use both that method and the plain request, keeping the model, briefs, and word limits the same.
 
@@ -31,6 +41,12 @@ The comparison should measure resemblance to the author, rather than a preferenc
 Check facts and copied phrasing before asking readers to judge style. Reject drafts with factual errors, wording copied from the reserved original, or invented quotations or personal experiences. A draft that describes the author's style instead of explaining the topic also fails.
 
 Count rejected drafts as failures and report them alongside reader judgments.
+
+## Challenges
+
+- The model may have memorized Feynman's best-known passages and copy their wording.
+- Readers may recognize a famous original and vote from memory instead of judging style.
+- Drafts may invent quotations or anecdotes to sound like Feynman.
 
 ## Assumptions and open decisions
 
