@@ -1,10 +1,11 @@
-Local Markdown links and heading anchors checked: 79
-Link and whitespace errors: 0
+Local Markdown links and heading anchors checked: 87
+Link errors: 0
 Archive snapshot links retain their original directory context and are excluded from navigation checks.
-Command: diff -ru "example/evidence/sources-before-agent" "example/paper-sources"
-Exit code: 0; output: (none)
 Command: git diff --check
 Exit code: 0; output: (none)
-Mermaid source reviewed for solid source edges and dashed inference edges; rendering not tested.
-Paper claims: agent passage checks recorded in agent-checks.md; no user checks claimed.
-No dependencies installed. No model experiment, reader study, or fresh-session query run.
+Command: diff -qr "example/evidence/sources-before-agent" "example/paper-sources"
+Exit code: 1
+Files example/evidence/sources-before-agent/notes.md and example/paper-sources/notes.md differ
+style-evaluation.md and tinystyler.md match their snapshot copies byte for byte.
+notes.md differs in introductory text, status notices, and link descriptions; the reading observations and source claims match.
+Mermaid diagram unchanged; rendering not tested.

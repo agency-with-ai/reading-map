@@ -36,4 +36,4 @@ Before a larger reader study, pilot the task and ask whether readers recognize o
 
 ## Check status
 
-Every claim remains unchecked by the user. Agent factual and connection checks are in the [ledger](../evidence/agent-checks.md); [research notes](../paper-sources/notes.md#claim-checks) distinguish them from independent reading. The [answer draft](answer-draft.md) is a same-session rehearsal.
+See [agent checks](../evidence/agent-checks.md) and [example status](../README.md#status).

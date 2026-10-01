@@ -1,6 +1,6 @@
 # Agent claim checks
 
-All verdicts below are the agent's. No user check is recorded. Page numbers refer to printed proceedings pages, with PDF page numbers supplied for navigation. Passages were read from the original PDFs using text extraction.
+Page numbers refer to printed proceedings pages; PDF page numbers help locate passages. See [example status](../README.md#status) for who performed these checks.
 
 | ID and kind | Claim checked | Original passage | Agent verdict and limit |
 |---|---|---|---|
@@ -13,6 +13,4 @@ The factual check addresses [the evaluation page](../map/style-evaluation.md). T
 
 ## Evidence still missing
 
-No user reading, user claim check, or partner judgment is supplied. There is no fresh-session answer, actual conversation export, reader pilot, measured author-recognition accuracy, or demonstrated improvement over the plain prompt. The source settings do not settle the reader count, number of passages for a main study, or improvement threshold.
-
-No reading map claim is promoted to user-checked status. The project decision remains an exploratory example.
+The papers do not establish reader recognition of Feynman or improvement over the plain prompt. They leave the reader count, number of passages for a main study, and improvement threshold open.

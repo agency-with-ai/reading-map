@@ -28,8 +28,6 @@ For each claim you check, record the original passage and your result. Correct a
 |---|---|---|
 | | | |
 
-Note which of the lab's checks each row records.
-
 ## Fresh-session answer
 
 - Question asked and pages cited in the answer

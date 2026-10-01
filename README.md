@@ -1,60 +1,94 @@
 # Reading Map
 
-Files and prompts for the reading map in [Lab 3, Step 4](https://agencyai.mit.edu/lab3/#step-4-put-the-spec-to-work). Follow the lab page for the assignment, reading and checking requirements, partner exchange, and checkoffs.
+Files and prompts for building a reading map from papers that bear on a project question.
 
-## Set up
-
-Claude's instructions are in [CLAUDE.md](CLAUDE.md). Fill in the brackets in the prompts below.
-
-[The Feynman example](example/project-spec.md) shows a project spec with open literature questions. Its source records in `example/paper-sources/` are unchecked drafts, and its reading notes are incomplete.
+Claude's instructions are in [CLAUDE.md](CLAUDE.md). Fill in the brackets in the prompts below. The [Feynman example](example/README.md) includes source records, a reading map, and a worked example.
 
 ## 1. Find and read sources
-
-Record your question and spec passage in [your notes](paper-sources/notes.md#question-from-my-spec).
 
 ```text
 Find candidate papers.
 Question: [question]
 Spec passage: [spec passage]
+Save the question and spec passage in paper-sources/notes.md.
+Return candidate titles, URLs, reasons for relevance, and access limits.
 ```
 
-Save papers in `paper-sources/papers/` or record their URLs. Put your reading observations in [your reading notes](paper-sources/notes.md#reading-notes). For each paper, copy [the source template](paper-sources/TEMPLATE.md) to a descriptive filename in `paper-sources/` and fill it in.
+Choose the papers you want to read.
+
+```text
+Prepare these papers: [titles or URLs].
+Save accessible papers in paper-sources/papers/. If a paper cannot be
+saved, record its URL and access limit.
+Use paper-sources/TEMPLATE.md to create a source record for each paper.
+Fill in bibliographic details and source-supported passages with locations
+and limits. Link the records from paper-sources/notes.md.
+```
+
+Read the papers, including the passages your decision depends on.
+
+```text
+Record my reading observations in paper-sources/notes.md.
+Paper: [title or source record]
+Observations, questions, and uncertainties: [your notes]
+```
 
 ## 2. Build and connect the pages
 
 ```text
-Build the reading map.
-Question: [question]
-Spec passage: [spec passage]
-Source records: [paths]
+Build the reading map from these source records: [paths].
+Use the question and spec passage in paper-sources/notes.md.
+Snapshot paper-sources/ in a new directory under evidence/ before building.
+Create linked source pages and a comparison page under map/, starting
+at map/index.md. Include passage locations, limits, a comparison table,
+and a diagram connecting evidence to the project decision.
+Run diff -ru between the snapshot and paper-sources/ after building.
+Report the command, exit code, and any differences.
 ```
-
-The generated pages start at [map/index.md](map/index.md). Each paper gets a source page; `map/question.md` compares the evidence for your question.
-
-Before building, Claude copies your source records into `evidence/`. Run the `diff` command it gives you. No output means the records match the snapshot.
 
 ## 3. Check and query the reading map
 
-Record the checks required by the lab in [your claim checks](paper-sources/notes.md#claim-checks). Include original passage locations and any corrections to the reading map.
+Read the map and check its claims against the original passages.
 
-Export the build conversation to `evidence/` using [these instructions](evidence/README.md). Use this prompt in the lab's fresh-session query.
+```text
+Record my checks in paper-sources/notes.md and correct the affected map pages.
+Claims or connections: [claims]
+Original passage locations: [locations]
+My findings: [supported, corrected, or unresolved, with reasons]
+```
+
+Export the build conversation to `evidence/map-build.txt` using the application's export command. In Claude Code, use `/export`. Start a fresh session and use this prompt.
 
 ```text
 Read CLAUDE.md. Use the saved reading map to answer [question],
 starting at map/index.md. Do not browse or read the original papers.
+Cite supporting pages and original passage locations, and state what
+remains unresolved.
 ```
 
-After recording your answer check in `paper-sources/notes.md`, ask Claude to save it.
+Check a claim in the answer against its original passage.
 
 ```text
-Save the answer. I checked [claims] against [passages]
-and found [result].
+Save the answer to map/answer.md and link it from map/index.md.
+I checked [claims] against [passages and locations] and found [result].
+Record my check in paper-sources/notes.md and update the affected map pages.
 ```
 
-Claude writes `map/answer.md` and links it from the index. Export the query conversation separately and link both exports from your notes.
+Export the query conversation to `evidence/map-query.txt`, then use this prompt.
+
+```text
+Link evidence/map-build.txt and evidence/map-query.txt from the saved
+exchanges section of paper-sources/notes.md.
+```
 
 ## 4. Make or revisit the decision
 
-Put the decision in your spec and its supporting passages and limits in [your notes](paper-sources/notes.md#project-decision).
+Decide what the evidence supports, or which question remains open.
 
-Return to [Lab 3](https://agencyai.mit.edu/lab3/#step-4-put-the-spec-to-work) for the partner exchange and Checkoff 2.
+```text
+Record this decision in my spec at [path]: [decision or open question].
+Supporting passages and limits: [evidence and differences from my setting]
+Next check, if needed: [next check]
+Record the reasoning and source links in the project decision section
+of paper-sources/notes.md.
+```

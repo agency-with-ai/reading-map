@@ -1,6 +1,6 @@
 # Answer draft from the saved reading map
 
-**Status.** Same-session agent rehearsal, unchecked by the user. This is not a fresh-session result or a saved checked answer. The agent has already seen the original papers.
+**Status.** Draft; generated in the build session and not independently checked.
 
 Use the one-day version to compare one method with the plain prompt on the same model, factual briefs, and word limits. Record factual and copying failures separately from resemblance and readability judgments. This is a project inference from the [question page](question.md), not a proven author-recognition protocol.
 
@@ -10,4 +10,4 @@ Use the one-day version to compare one method with the plain prompt on the same 
 
 The saved pages leave the reader task, sample sizes, improvement threshold, and in-scope writing method unresolved. The [proposed next check](question.md#decision-and-next-evidence) is a pilot that records recognition of originals and reasons for judgments. Three owner-judged cases can inform development, but do not answer the broader reader question.
 
-Agent answer check A1 is recorded in the [ledger](../evidence/agent-checks.md). Human checking and a fresh-session query remain pending.
+Agent answer check A1 is recorded in the [ledger](../evidence/agent-checks.md).

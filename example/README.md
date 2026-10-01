@@ -1,19 +1,21 @@
 # Feynman reading-map example
 
-This is an agent rehearsal of Lab 3 using the local course source at `~/code/agency-ai/labs/w03/lab.md`. It investigates how to judge whether generated technical explanations resemble Feynman's writing.
+How can we tell whether a generated technical explanation sounds like Feynman? This example uses two papers to examine that question and decide what to test.
 
-Start with the [project spec](project-spec.md), then follow the [lab notes](lab-notes.md) and [research notes](paper-sources/notes.md). The [reading map index](map/index.md) leads to two source pages, a comparison table, a diagram, and an answer draft.
+The decision is to compare drafts on separate dimensions, including factual accuracy, readability, and resemblance to the author. The papers do not establish a reliable test of whether readers recognize Feynman's writing, so that question remains open.
+
+Start with the [project spec](project-spec.md), then read the [evidence comparison](map/question.md) and [answer draft](map/answer-draft.md). The [research notes](paper-sources/notes.md) show the passages and reasoning behind the decision.
 
 | Artifact | What it records |
 |---|---|
-| [Lab notes](lab-notes.md) | Project scope, worked case, agent critique, decision, and human steps still pending. |
+| [Lab notes](lab-notes.md) | Project scope, worked case, critique, and decision. |
 | [Source records](paper-sources/notes.md#candidate-selection) | Selected papers, original URLs, passage locations, and limits. |
 | [Reading map](map/index.md) | What the two source records support and leave open. |
 | [Agent checks](evidence/agent-checks.md) | Factual, connection, and answer checks against the papers. |
 | [Build record](evidence/map-build.md) | Build input, output, source snapshot, and integrity command. |
-| [Query record](evidence/map-query.md) | Query prompt and limits of the same-session rehearsal. |
+| [Query record](evidence/map-query.md) | Query prompt, answer, and session context. |
 | [Verification](evidence/verification.txt) | File, link, snapshot, and whitespace check results. |
 
-All reading observations and checks here belong to the agent. Independent student reading, partner exchanges, staff checkoffs, conversation exports, and a fresh-session query are pending. The answer is saved as a draft because no user answer check is supplied.
+## Status
 
-The example's decision is to run an exploratory comparison while leaving a claim of successful author imitation open. It contains no model experiment or reader study.
+The notes and checks are agent-authored and have not been independently checked. The answer comes from the build session, where the agent had already read the papers; it does not test retrieval in a fresh session. Build and query records are summaries, not conversation exports. No model experiment or reader study has been run.

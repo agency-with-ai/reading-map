@@ -1,6 +1,6 @@
 # Example research notes
 
-These are Codex's observations for an agent rehearsal. They do not stand in for the independent reading required by Lab 3. All claims remain unchecked by the user.
+Agent-authored notes. See [example status](../README.md#status).
 
 ## Question from my spec
 
@@ -15,7 +15,7 @@ The relevant [spec passage](../project-spec.md#comparison-procedure) asks whethe
 | [Evaluating Style Transfer for Text](style-evaluation.md) | Separates evaluation dimensions and compares human judgment tasks. | Public [PDF](https://aclanthology.org/N19-1049.pdf); Yelp sentiment transfer. |
 | [TinyStyler](tinystyler.md) | Distinguishes automatic author-style evaluation from human formality evaluation. | Public [PDF](https://aclanthology.org/2024.findings-emnlp.781.pdf); Reddit authors and GYAFC formality. |
 
-These are the two candidates supplied in this example. The agent inspected their original papers and retained both for the rehearsal. No broader or exhaustive search is claimed. Paper URLs serve as the original-paper records; PDFs are not bundled.
+The original papers are available at the PDF links above.
 
 ## Reading notes
 
@@ -43,16 +43,16 @@ Agent inference for the spec: the author-style benchmark is closer to our questi
 
 ## Claim checks
 
-The [agent check ledger](../evidence/agent-checks.md) records a factual claim, a connection between papers, and a claim from the saved answer draft. It includes original passage locations, verdicts, and the metric distinction that needs care in TinyStyler. These are agent checks only. Independent user checks are pending.
+The [agent checks](../evidence/agent-checks.md) give passage locations and verdicts for a factual claim, a connection between papers, and an answer claim.
 
 ## Project decision
 
 Use the [one-day evaluation decision](../project-spec.md#evaluation-decision-for-the-example) as an exploratory comparison. Keep facts, copied wording, and invented experiences as rejection checks. Record style resemblance and readability separately. Leave the reader-study design, reader and passage counts, and improvement threshold open.
 
-This is an agent-authored example decision, supported by the limited connections in [the question page](../map/question.md). No explanations, reader votes, or model performance measurements are part of this run.
+See [the evidence comparison](../map/question.md) for supporting passages and limits.
 
 ## Saved exchanges
 
-The [build record](../evidence/map-build.md) and [query record](../evidence/map-query.md) are agent-written run records, not conversation exports. The [answer draft](../map/answer-draft.md) is from this same session. A fresh-session query, its export, and a user-checked answer remain pending.
+[Build summary](../evidence/map-build.md), [query summary](../evidence/map-query.md), and [answer draft](../map/answer-draft.md).
 
 The [source snapshot](../evidence/sources-before-agent/) captures this directory before the reading map was built. Checks and execution results live outside it so the records remain comparable.

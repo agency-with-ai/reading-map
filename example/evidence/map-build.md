@@ -1,12 +1,8 @@
 # Reading map build record
 
-This is an agent-written run record, not a verbatim conversation export.
+Build summary. See [example status](../README.md#status).
 
-## Task and scope
-
-Run the Feynman example using the local Lab 3 instructions and record the results under `example/`. The two existing candidates are retained after inspecting their original PDFs. The independent-reading and partner portions remain pending.
-
-## Build input
+## Task prompt
 
 ```text
 Build the example reading map.
@@ -19,8 +15,6 @@ Source records:
 Treat these as agent-prepared drafts, not user-checked records.
 Write the reading map under example/map/.
 ```
-
-This block records the build task used in this session; it is not a quotation of a separate user exchange. The build uses the named records. Browsing and PDF inspection belong to source preparation and agent checking.
 
 ## Outputs
 
@@ -36,12 +30,4 @@ Run this from the repository root:
 diff -ru "example/evidence/sources-before-agent" "example/paper-sources"
 ```
 
-No output and exit code 0 mean the source records match. See [verification](verification.txt) for the agent's executed result. User execution of the comparison remains unrecorded.
-
-## Access and execution limits
-
-The local Lab 3 source and Lab 2 reading questions were read from the course checkout. The hosted Lab 3 page returned an access error and is not used as the assignment source.
-
-Original PDFs were inspected using public ACL URLs and the installed `pdftotext` command. No dependencies were installed. The source records retain the public URLs; no PDF or extracted full text is bundled. No model experiment or recurring search ran.
-
-A conversation export must be produced by the host application. This record supplies neither a build export nor a fresh-query export.
+No output and exit code 0 mean the files match. The paper records match the snapshot; the current `notes.md` differs. See [verification](verification.txt) for the comparison results.
