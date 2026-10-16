@@ -46,7 +46,7 @@ Export the build conversation to `evidence/map-build.txt` using the application'
 
 ```text
 This is a new session, separate from the one that built the map.
-Read CLAUDE.md. Answer the project question recorded in
+Read AGENTS.md. Answer the project question recorded in
 paper-sources/notes.md using the saved reading map, starting at map/index.md.
 Do not browse or read the original papers.
 ```
